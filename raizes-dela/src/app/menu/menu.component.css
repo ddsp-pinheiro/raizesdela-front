@@ -31,6 +31,7 @@ img{
     color: black;
 }
 #login{
+    text-decoration: none;
     margin-right: 30px;
     color: white;
 }
