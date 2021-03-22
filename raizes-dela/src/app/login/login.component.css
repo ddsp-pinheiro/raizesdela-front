@@ -1,0 +1,33 @@
+body{
+    background-position: center center;
+    background-size: cover;
+    background-image: url(https://i.imgur.com/5NNWCl4.jpg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+#d-color{
+    background-color: rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    margin: 20vh;
+    padding: 30px;
+    border-radius: 13%;
+}
+.center{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.btn{
+    color: white;
+    background-color: #283618;
+}
+#enviar{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+#l-cadastro{
+    margin-top: 10px;
+}
