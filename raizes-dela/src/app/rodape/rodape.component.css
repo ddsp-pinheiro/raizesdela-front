@@ -1,0 +1,19 @@
+#rodape-color{
+    text-align: center;
+
+    background-color: #606C38;
+}
+#criadores{
+    color: white;
+}
+#criadores a{
+    color: white;
+}
+#criadores a:hover{
+    color: #DDA15E;
+}
+#direitos{
+    font-size: 10pt;
+    color: white;
+    padding-bottom: 13px;
+}
