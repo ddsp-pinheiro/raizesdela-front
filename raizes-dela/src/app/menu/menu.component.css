@@ -43,3 +43,21 @@ img{
 }
 
 
+/****/
+#divBusca{
+  background-color: white;
+  border-radius:15px;
+  width: 500px;
+  display: flex;
+}
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left: 20px;
+  font-style:italic;
+  font-size:15px;
+  border:none;
+}
+#cor{
+  color:black;
+}
