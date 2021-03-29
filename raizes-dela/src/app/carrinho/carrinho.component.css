@@ -1,0 +1,47 @@
+
+#container-produto{
+    display: flex;
+    justify-content: center;
+}
+#produto{
+   background-color: #dda25e98;
+    border-radius: 10px;
+    width: 800px;
+    margin: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#produto img{
+    width: 65px;
+}
+#nome{
+    margin: 4vh;
+}
+#preco{
+    margin: 4vh;
+}
+#produto input{
+    margin: 4vh;
+    width: 80px;
+    height: 30px;
+}
+#naosei{
+    margin: 4vh;
+}
+#confirma{
+    display: flex;
+    justify-content: center;
+}
+#total{
+    margin-bottom: 10vh;
+    text-align: right;
+}
+.btn{
+    width: 40vh;
+    margin-bottom: 5vh;
+    font-size: 15pt;
+    padding: 2vh;
+    color: white;
+    background-color: #283618;
+}
