@@ -1,0 +1,33 @@
+body{
+    display: flex;
+}
+#grup{
+    margin: 15vh;
+    display: flex;
+    align-items: center;
+}
+
+#txt-grup{
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+
+    font-size: 50pt;
+}
+button{
+    margin: 20px;
+    padding: 10px;
+}
+.btn{
+    color: white;
+    background-color: #283618;
+}
+#descricao{
+    display: flex;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: #dda25eb9;
+}
