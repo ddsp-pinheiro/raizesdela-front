@@ -1,18 +1,28 @@
-<body>
-    <div id="d-color">
-        <div class="form-group">
-            <h1 class="center">Entrar</h1>
-            <label for="exampleInputEmail1">Email</label>
-            <input [(ngModel)] = 'userLogin.email' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Seu email">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Senha</label>
-            <input  [(ngModel)] = 'userLogin.senha'  type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-        </div>
-        <div id="enviar">
-            <button (click)='entrar()' type="submit" class="btn">Entrar</button>
-        </div>
-        <p id="l-cadastro">Ainda não possui cadastro?<a routerLink='/cadastrar'> Cadastre-se</a></p>
+<div class="fundo">
+  <a routerLink='/home'>
+    <img class="imagem" src="https://i.imgur.com/wfdiIWQ.png" alt="logo">
+  </a>
+</div>
+
+
+<div class="backgroud">
+  <div id="d-color">
+    <div class="col-md-12">
+      <div class="form-group">
+        <h1 class="center">Entrar</h1>
+        <label for="exampleInputEmail1">Email</label>
+        <input [(ngModel)]='userLogin.email' type="email" class="form-control" id="exampleInputEmail1"
+          aria-describedby="emailHelp" placeholder="Seu email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Senha</label>
+        <input [(ngModel)]='userLogin.senha' type="password" class="form-control" id="exampleInputPassword1"
+          placeholder="Senha">
+      </div>
+      <div id="enviar">
+        <button (click)='entrar()' type="submit" class="btn">Entrar</button>
+      </div>
+      <p id="l-cadastro">Ainda não possui cadastro?<a routerLink='/cadastrar'> Cadastre-se</a></p>
     </div>
-</body>
+  </div>
+</div>

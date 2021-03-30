@@ -14,6 +14,9 @@ import { ProdutoComponent } from './produto/produto.component';
 import { CadProdutoComponent } from './cad-produto/cad-produto.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { FormsModule } from '@angular/forms';
+import { ProdutorasComponent } from './produtoras/produtoras.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { PagamentoComponent } from './pagamento/pagamento.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { FormsModule } from '@angular/forms';
     ProdutoComponent,
     CadProdutoComponent,
     CarrinhoComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    ProdutorasComponent,
+    SobreNosComponent,
+    PagamentoComponent
   ],
   imports: [
     BrowserModule,
