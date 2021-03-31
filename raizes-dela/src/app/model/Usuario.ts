@@ -6,5 +6,5 @@ export class Usuario{
     public email: string
     public senha: string
     public produto: Produto[]
- //   public tipoVendedor: boolean
+    public tipoVendedor: boolean
 }

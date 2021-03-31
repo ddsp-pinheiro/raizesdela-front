@@ -11,7 +11,8 @@ import { AuthService } from '../service/auth.service';
 export class CadastrarComponent implements OnInit {
   user: Usuario = new Usuario
   confirmarSenha: string
-  
+
+
   //tipoUsuario: boolean
   constructor(
     private authService: AuthService,
@@ -27,6 +28,13 @@ export class CadastrarComponent implements OnInit {
   // tipoUser(event: any) {
   //   this.tipoUser = event.target.value
   // }
+
+
+  tipoUser(event: any){
+    this.user.tipoVendedor = event.target.value
+  }
+
+
   cadastrar() {
     //this.user.tipoVendedor = this.tipoUsuario
     if(this.user.senha != this.confirmarSenha) {

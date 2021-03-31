@@ -27,6 +27,8 @@ export class LoginComponent implements OnInit {
       environment.id = this.userLogin.id
       environment.nome = this.userLogin.nome
       environment.token = this.userLogin.token
+      environment.tipoVendedor = this.userLogin.tipoVendedor
+
       this.router.navigate (['/home'])
     },error=>{
       if( error.status == 500 ){
