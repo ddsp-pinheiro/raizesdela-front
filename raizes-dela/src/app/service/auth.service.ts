@@ -1,3 +1,4 @@
+import { Produto } from './../model/Produto';
 import { environment } from './../../environments/environment.prod';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -20,6 +21,10 @@ export class AuthService {
 
   cadastrar(user: Usuario): Observable<Usuario>{
     return this.http.post<Usuario>('http://localhost:8080/usuario/cadastrar', user)
+  }
+
+  cadProduto(produto: Produto): Observable<Produto>{
+    return this.http.post<Produto>('http://localhost:8080/usuario/produto', produto)
   }
 
  /* vendedora(){
