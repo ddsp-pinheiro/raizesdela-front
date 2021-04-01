@@ -4,6 +4,7 @@
 
 #valorTotal{
  color: #BC6C25;
+ font-size: 70px;
 }
 .nav-link{
   color: #606c387e;
@@ -11,9 +12,11 @@
 .btn-verde{
   color: white;
   background-color: #283618;
+  margin-bottom: 30px;
 }
 
 .btn-tijolo{
   color: white;
   background-color: #BC6C25;
+  margin-bottom: 30px;
 }

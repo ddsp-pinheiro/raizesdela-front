@@ -1,23 +1,27 @@
-<body>
-    <div class="container" id="container-produto">
-        <div id="produto">
-            <img src="https://cd.shoppub.com.br/beirario/media/cache/fc/5c/fc5c9341d00c5d9598f6eb629344e42e.jpg" alt="">
-            <p id="nome">nomeProduto</p>
-            <p id="preco">R$: 0,00</p>
-            <input type="number">
-            <p id="naosei">parcial</p>
+<div class="container">
+        <h2 class="mt-3">Carrinho</h2>
+    <div class=" container-fluid" id="container-produto">
+        <div class="row" id="produto" > <!-- *ngFor="let item of carrinho"  -->
+            <div class="col-md-2"> <img src="https://cd.shoppub.com.br/beirario/media/cache/fc/5c/fc5c9341d00c5d9598f6eb629344e42e.jpg" alt=""></div>
+            <div class="col-md-3"><p id="nome">nomeProduto</p></div>
+          <div class="col-md-2"><p  id="preco">R$: 2,00</p></div><!-- {{item.valor}} -->
+            <!--Nova div quantidade-->
+            <div class="col-md-2" id="quantidade">
+              <input type="button" id="minus" value="-"(click)="process(-1)" (click)="parcial()" (click)="total()" />
+              <input [(ngModel)]="quant" id="quant" name="quant" class="text" size="1" value="1" type="text" maxlength="5" />
+              <input type="button" id="plus" value="+" (click)="process(1)" (click)="parcial()" (click)="total()">
+            </div>
+          <!--Fim nova div-->
+          <div class="col-md-3"><p id="precoParcial">R$ {{vParcial}}</p></div>
         </div>
     </div>
 
-    <div class="container">
+
         <div class="confirma">
             <hr>
-            <h3 id="total"><strong>TOTAL:</strong> 0,00</h3>
+            <h3 id="total"><strong>TOTAL:</strong> R$ {{vTotal}} </h3>
             <div class="d-flex justify-content-center">
-                <button type="submit" class="btn" routerLink="/pagamento"><strong>Comprar</strong></button>
+                <button type="submit" id="comprar" class="btn" routerLink="/pagamento"><strong>Comprar</strong></button>
             </div>
         </div>
     </div>
-
-
-</body>

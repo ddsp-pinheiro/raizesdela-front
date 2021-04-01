@@ -9,17 +9,14 @@ import { Router } from '@angular/router';
 export class PagamentoComponent implements OnInit {
 
   //formulario endereco
-  endereco = document.querySelector("#endereco")
-  cidade = document.querySelector ("#cidade")
-  cep = document.querySelector("#cep")
+  endereco: string
+  cidade: string
+  cep: string
   //formulario cartao
-   nomeCartao= document.querySelector("#nomeCartao")
-   noCartao= document.querySelector("#noCartao")
-   cpf= document.querySelector("#cpf")
-   cvv= document.querySelector("#cvv")
-  //validações
-  parte1OK = false
-  parte2Ok = false
+   nomeCartao: string
+   noCartao: string
+   cpf: string
+   cvv: string
 
   constructor(private router:Router) { }
 
@@ -27,30 +24,29 @@ export class PagamentoComponent implements OnInit {
     window.scroll(0,0)
   }
 
-  //  validaBoleto(){
-  //     if(this.endereco.value == "" || this.cidade != null || this.cep != null)
-  //     {
-  //       this.parte1OK = true
+   validaBoleto(){
+      if(this.endereco != null || this.cidade != null || this.cep != null){
+        this.router.navigate(['/home'])
+        alert("Boleto gerado com sucesso! Aguarde email de confirmação da compra.")
 
-  //     } else{
-  //       alert("Preencha corretamente o formulário")
-  //     }
-  // }
+      } else{
+        alert("Preencha corretamente o formulário")
+      }
+  }
 
-  // validaCartao(){
-  //     if(this.parte1OK == false ){
-  //       alert("Preencha corretamente o endereço")
-  //     } else if(this.nomeCartao == null || this.cpf == null || this.noCartao == null || this.cvv == null) {
-  //       alert("Preencha corretamente os dados do cartão")
-  //     } else{
-  //       this.parte2Ok = true
-  //       alert("Pagamento realizado com sucesso! Aguarde email de confirmação.")
-  //       this.router.navigate (['/home'])
-  //     }
-  // }
+  validaCartao(){
+    if(this.endereco == null || this.cidade == null || this.cep == null){
+        alert("Preencha corretamente o endereço")
+      } else if(this.nomeCartao == null || this.cpf == null || this.noCartao == null || this.cvv == null) {
+        alert("Preencha corretamente os dados do cartão")
+      } else{
+        alert("Pagamento realizado com sucesso! Aguarde email de confirmação da compra.")
+        this.router.navigate (['/home'])
+      }
+  }
 
   sucesso(){
-    alert("Pagamento realizado com sucesso! Aguarde email de confirmação.")
+    alert("Pagamento realizado com sucesso! Aguarde email de confirmação da compra.")
     this.router.navigate (['/home'])
   }
 }

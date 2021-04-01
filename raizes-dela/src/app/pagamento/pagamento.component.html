@@ -5,11 +5,11 @@
   <h1 id="valorTotal" class="text-center">R$999,99</h1> <!--Valor interpolado-->
 
   <label>Endereço de Entrega</label>
-  <input id="enreco"type="text" class="form-control">
+  <input [(ngModel)]="endereco" id="endereco"type="text" class="form-control">
   <div class="row form-row mb-3">
     <div class="col-md-8">
       <label>Cidade</label>
-      <input id="cidade"type="text" class="form-control">
+      <input [(ngModel)]="cidade"id="cidade"type="text" class="form-control">
     </div>
     <div class="col-md-1">
       <label>Estado</label>
@@ -45,7 +45,7 @@
     </div>
     <div class="col-md-3">
       <label>CEP</label>
-      <input id="cep" placeholder="XXXXX-XXX" type="text" class="form-control">
+      <input [(ngModel)]="cep" id="cep" placeholder="XXXXX-XXX" type="text" class="form-control">
     </div>
   </div>
   <nav class="mb-3">
@@ -65,7 +65,7 @@
 
       <div class="d-flex justify-content-center">
         <a class="btn btn-tijolo mr-5" routerLink="/carrinho"  >Cancelar</a>
-        <a class="btn btn-verde" href = "https://drive.google.com/file/d/1Jj76x1dCv4n4cTyD0Idtzpleea2VvFjh/view" target="_blank" (click)="sucesso()">Gerar Boleto</a> <!--(click)="validaBoleto()"-->
+        <a class="btn btn-verde" href = "https://drive.google.com/file/d/1Jj76x1dCv4n4cTyD0Idtzpleea2VvFjh/view" target="_blank" (click)="validaBoleto()">Gerar Boleto</a> <!--(click)="validaBoleto()"-->
       </div>
     </div>
   <div class="tab-pane fade" id="cartao" role="tabpanel" aria-labelledby="cartao-tab">
@@ -79,22 +79,22 @@
       <div class="form-row mb-3">
         <div class="col-md-8">
           <label>Nome no Cartão</label>
-          <input id="nomeCartao" type="text" class="form-control">
+          <input [(ngModel)]="nomeCartao" id="nomeCartao" type="text" class="form-control">
         </div>
         <div class="col-md-4">
           <label>Número do CPF</label>
-          <input id="cpf" placeholder="XXX.XXX.XXX-XX" type="text" class="form-control">
+          <input [(ngModel)]="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX" type="text" class="form-control">
         </div>
       </div>
 
       <div class="form-row mb-3">
         <div class="col-md-6">
           <label>Número do Cartão</label>
-          <input id="nomeCartao" placeholder="XXXX XXXX XXXX XXXX" type="text" class="form-control">
+          <input [(ngModel)]="noCartao" id="noCartao" placeholder="XXXX XXXX XXXX XXXX" type="text" class="form-control">
         </div>
         <div class="col-md-2">
           <label>Código de segurança</label>
-          <input id="cvv" placeholder="XXX" type="text" class="form-control">
+          <input [(ngModel)]="cvv" id="cvv" placeholder="XXX" type="text" class="form-control">
         </div>
         <div class="col-md-2">
           <label>Mês de Validade</label>
@@ -127,7 +127,7 @@
 
       <div class="d-flex justify-content-center">
         <a class="btn btn-tijolo mr-5" routerLink="/carrinho" >Cancelar</a>
-         <a class="btn btn-verde" (click)="sucesso()"> Pagar</a>
+         <a class="btn btn-verde" (click)="validaCartao()"> Pagar</a>
       </div>
     </div>
   </div>
