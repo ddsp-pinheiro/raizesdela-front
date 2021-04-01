@@ -11,12 +11,12 @@ export class PagamentoComponent implements OnInit {
   //formulario endereco
   endereco: string
   cidade: string
-  cep: string
+  cep: number
   //formulario cartao
    nomeCartao: string
-   noCartao: string
-   cpf: string
-   cvv: string
+   noCartao: number
+   cpf: number
+   cvv: number
 
   constructor(private router:Router) { }
 
