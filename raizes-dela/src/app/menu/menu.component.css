@@ -31,6 +31,10 @@ img{
 .fa-shopping-cart:hover{
     color: black;
 }
+#vender{
+    margin-right: 5px;
+    color: white;
+}
 #login{
     text-decoration: none;
     margin-right: 30px;

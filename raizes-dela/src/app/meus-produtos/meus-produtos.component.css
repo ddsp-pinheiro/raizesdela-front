@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+.btn-verde{
+    color: white;
+    background-color: #283618;
+}
+.btn-caramelo{
+    color: white;
+    background-color: #BC6C25;
+}
+.cards{
+    justify-content: space-around;
+    display: flex;
+    margin-bottom: 15vh;
+}

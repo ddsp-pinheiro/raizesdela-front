@@ -13,6 +13,9 @@ body{
     align-items: center;
     justify-content: center;
 }
+#preco{
+    color: #BC6C25;
+}
 h1{
 
     font-size: 50pt;

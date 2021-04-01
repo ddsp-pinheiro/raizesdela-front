@@ -1,75 +1,110 @@
 <body>
-    <div class="container-fluid">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-12">
-                <h1 class="text-center mt-5 mb-5">Cadastrar Produtos</h1>
-            </div>
-        </div>
-        <!-- start code on the left side of the page -->
-        <div class="row justify-content-center">
-            <div class="col-md-5">
-                <div class="form-group">
-                    <label for="nomeProduto">Nome do Produto</label>
-                    <input [(ngModel)]='produto.nome' class="form-control" type="text" name="nomeProduto" id="nomeProduto"
-                        placeholder="Digite o nome do produto">
-                </div>
-                <div class="form-group">
-                    <label for="descricaoProduto">Descrição do Produto</label>
-                    <textarea [(ngModel)]='produto.descricao' class="form-control" id="descricaoProduto" rows="8"
-                        placeholder="Insira aqui informações do produto como quantidade por venda (quilo, litro, metro, unidade,etc), origem do produto, validade estimada em caso de produto perecível, entre outras informações que possam interessar o comprador. (Máximo de 200 caracteres)"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="fotoProduto">URL/link da foto do produto</label>
-                    <input [(ngModel)]='produto.imagem' type="text" class="form-control" id="fotoProduto" placeholder="Insira aqui o link da foto">
-                </div>
-            </div>
-            <!-- left code ends here -->
-            <!-- start code on the right side of the page -->
-            <div class="col-md-5">
-                <div class="form-group">
-                    <label>Categoria</label>
-                    <select class="form-control">
-                        <option selected disabled value="">Categorias</option>
-                        <option>Categoria 1</option>
-                        <option>Categoria 2</option>
-                        <option>Categoria 3</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="estoque">Estoque</label>
-                    <input [(ngModel)]='produto.estoque' type="text" class="form-control" id="estoque" placeholder="Digite a quantidade do estoque">
-                </div>
-                <div class="form-group">
-                    <label for="valor">Valor</label>
-                    <input [(ngModel)]='produto.valor' type="text" class="form-control" id="valor" placeholder="Digite o preço do produto">
-                </div>
-                <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" class="form-control" id="cidade">
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="estado">Estado</label>
-                        <select class="custom-select" id="estado">
-                            <option selected disabled value="">Escolha</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="cep">CEP</label>
-                        <input type="text" class="form-control" id="cep">
-                    </div>
-                </div>
-            </div>
-            <!-- right code ends here -->
-        </div>
-        <div class="row d-flex align-items-center">
-            <div class="col-md-12">
-                <div class="d-flex justify-content-center mt-4 mb-5">
-                    <button type="submit" class="btn mr-4" id="btn-1">Cancelar</button>
-                    <button (click)='cadProduto()' type="submit" class="btn" id="btn-2">Cadastrar produto</button>
-                </div>
-            </div>
-        </div>
+  <div class="container-fluid">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-12">
+        <h1 class="text-center mt-5 mb-5">Cadastrar Produtos</h1>
+      </div>
     </div>
+    <!-- start code on the left side of the page -->
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="form-group">
+          <label for="nomeProduto">Nome do Produto</label>
+          <input [(ngModel)]='produto.nome' class="form-control" type="text" name="nomeProduto" id="nomeProduto"
+            placeholder="Digite o nome do produto">
+        </div>
+        <div class="form-group">
+          <label for="descricaoProduto">Descrição do Produto</label>
+          <textarea [(ngModel)]='produto.descricao' class="form-control" id="descricaoProduto" rows="8"
+            placeholder="Insira aqui informações do produto como quantidade por venda (quilo, litro, metro, unidade,etc), origem do produto, validade estimada em caso de produto perecível, entre outras informações que possam interessar o comprador. (Máximo de 200 caracteres)"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="fotoProduto">URL/link da foto do produto</label>
+          <input [(ngModel)]='produto.imagem' type="text" class="form-control" id="fotoProduto"
+            placeholder="Insira aqui o link da foto">
+        </div>
+      </div>
+      <!-- left code ends here -->
+      <!-- start code on the right side of the page -->
+      <div class="col-md-5">
+        <div class="form-group">
+          <label>Categoria</label>
+          <select class="form-control">
+            <option selected disabled value="">Categorias</option>
+            <option>Legumes</option>
+            <option>Verduras</option>
+            <option>Frutas</option>
+            <option>Artesanatos</option>
+            <option>Doces</option>
+            <option>Laticínios</option>
+            <option>Veganos</option>
+            <option>Reciclados</option>
+            <option>Outros</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="estoque">Estoque</label>
+          <input [(ngModel)]='produto.estoque' type="text" class="form-control" id="estoque"
+            placeholder="Digite a quantidade do estoque">
+        </div>
+        <div class="form-group">
+          <label for="valor">Valor</label>
+          <input [(ngModel)]='produto.valor' type="text" class="form-control" id="valor"
+            placeholder="Digite o preço do produto">
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="cidade">Cidade</label>
+            <input type="text" class="form-control" id="cidade">
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="estado">Estado</label>
+            <select class="custom-select" id="estado">
+              <option selected disabled value="">Escolha</option>
+              <option value="AC">AC</option>
+              <option value="AL">AL</option>
+              <option value="AM">AM</option>
+              <option value="AP">AP</option>
+              <option value="BA">BA</option>
+              <option value="CE">CE</option>
+              <option value="DF">DF</option>
+              <option value="ES">ES</option>
+              <option value="GO">GO</option>
+              <option value="MA">MA</option>
+              <option value="MG">MG</option>
+              <option value="MS">MS</option>
+              <option value="MT">MT</option>
+              <option value="PA">PA</option>
+              <option value="PB">PB</option>
+              <option value="PE">PE</option>
+              <option value="PI">PI</option>
+              <option value="PR">PR</option>
+              <option value="RJ">RJ</option>
+              <option value="RN">RN</option>
+              <option value="RO">RO</option>
+              <option value="RR">RR</option>
+              <option value="RS">RS</option>
+              <option value="SC">SC</option>
+              <option value="SE">SE</option>
+              <option value="SP">SP</option>
+              <option value="TO">TO</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="cep">CEP</label>
+            <input type="text" class="form-control" id="cep">
+          </div>
+        </div>
+      </div>
+      <!-- right code ends here -->
+    </div>
+    <div class="row d-flex align-items-center">
+      <div class="col-md-12">
+        <div class="d-flex justify-content-center mt-4 mb-5">
+          <button type="submit" class="btn mr-4" id="btn-1">Cancelar</button>
+          <button (click)='cadProduto()' type="submit" class="btn" id="btn-2">Cadastrar produto</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>

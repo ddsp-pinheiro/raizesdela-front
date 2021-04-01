@@ -41,6 +41,16 @@
                         aria-hidden="true"></i></button>
             </div>
         </form>
+        <!-- Exemplo de único botão danger -->
+<div class="btn-group">
+    <button id="vender" type="button" class="btn btn-verde dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Vender
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" routerLink='/cad-produto'>Cadastrar produto</a>
+      <a class="dropdown-item" routerLink='/meus-produtos'>Meus produtos</a>
+    </div>
+  </div>
         <a id="login" routerLink='/login'><i class="fa fa-user-circle" aria-hidden="true"></i> Login</a>
         <a routerLink='/carrinho'><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
     </div>

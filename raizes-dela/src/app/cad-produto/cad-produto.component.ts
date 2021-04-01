@@ -1,7 +1,11 @@
+import { Usuario } from './../model/Usuario';
+import { Categoria } from './../model/Categoria';
+import { ProdutoService } from './../service/produto.service.service';
 import { Produto } from './../model/Produto';
 import { AuthService } from './../service/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-cad-produto',
@@ -10,27 +14,44 @@ import { Router } from '@angular/router';
 })
 export class CadProdutoComponent implements OnInit {
 
+  token= environment
   produto: Produto = new Produto
+  categoria: Categoria = new Categoria
+  usuario: Usuario = new Usuario
+  listaProduto: Produto[]
+  idCategoria: number
+  idUser: number
+
 
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private produtoService: ProdutoService,
   ) { }
 
   ngOnInit() {
     window.scroll(0,0)
   }
 
-  cadProduto() {
-    if(this.produto == null) {
-      alert("Preencha os campos corretamento")
-    } else {
-      this.authService.cadProduto(this.produto).subscribe((resp: Produto)=> {
-        this.produto = resp
-          this.router.navigate(['/cad-Produto'])
-          alert ('Produto cadastrado com sucesso!')
-      })
-    }
+  getAllProdutos() {
+    this.produtoService.getAllProduto().subscribe((resp: Produto[]) => {
+      this.listaProduto = resp
+    })
+  }
+
+  cadProduto(){
+        this.categoria.id = this.idCategoria
+        this.produto.categoria = this.categoria
+
+        this.usuario.id = this.idUser
+        this.produto.usuario = this.usuario
+
+        this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+          this.produto = resp
+          alert("Produto realizada com sucesso!")
+          this.produto = new Produto()
+        })
+
   }
 }
