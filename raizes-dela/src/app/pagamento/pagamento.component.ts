@@ -11,12 +11,12 @@ export class PagamentoComponent implements OnInit {
   //formulario endereco
   endereco: string
   cidade: string
-  cep: string
+  cep: number
   //formulario cartao
    nomeCartao: string
-   noCartao: string
-   cpf: string
-   cvv: string
+   noCartao: number
+   cpf: number
+   cvv: number
 
   constructor(private router:Router) { }
 
@@ -25,9 +25,11 @@ export class PagamentoComponent implements OnInit {
   }
 
    validaBoleto(){
-      if(this.endereco != null || this.cidade != null || this.cep != null){
+      if(this.endereco != null && this.cidade != null && this.cep != null){
         this.router.navigate(['/home'])
         alert("Boleto gerado com sucesso! Aguarde email de confirmação da compra.")
+        window.open("https://drive.google.com/file/d/1Jj76x1dCv4n4cTyD0Idtzpleea2VvFjh/view")
+
 
       } else{
         alert("Preencha corretamente o formulário")

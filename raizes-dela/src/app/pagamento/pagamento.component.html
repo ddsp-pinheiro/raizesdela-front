@@ -45,7 +45,7 @@
     </div>
     <div class="col-md-3">
       <label>CEP</label>
-      <input [(ngModel)]="cep" id="cep" placeholder="XXXXX-XXX" type="text" class="form-control">
+      <input [(ngModel)]="cep" id="cep" placeholder="XXXXX-XXX" type="text" pattern="\d{5}-\d{3}" maxlenght="8" class="form-control">
     </div>
   </div>
   <nav class="mb-3">
@@ -65,7 +65,7 @@
 
       <div class="d-flex justify-content-center">
         <a class="btn btn-tijolo mr-5" routerLink="/carrinho"  >Cancelar</a>
-        <a class="btn btn-verde" href = "https://drive.google.com/file/d/1Jj76x1dCv4n4cTyD0Idtzpleea2VvFjh/view" target="_blank" (click)="validaBoleto()">Gerar Boleto</a> <!--(click)="validaBoleto()"-->
+        <a class="btn btn-verde"  (click)="validaBoleto()">Gerar Boleto</a> <!--href = "" target="_blank"-->
       </div>
     </div>
   <div class="tab-pane fade" id="cartao" role="tabpanel" aria-labelledby="cartao-tab">
@@ -83,18 +83,18 @@
         </div>
         <div class="col-md-4">
           <label>Número do CPF</label>
-          <input [(ngModel)]="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX" type="text" class="form-control">
+          <input [(ngModel)]="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX" type="number" class="form-control">
         </div>
       </div>
 
       <div class="form-row mb-3">
         <div class="col-md-6">
           <label>Número do Cartão</label>
-          <input [(ngModel)]="noCartao" id="noCartao" placeholder="XXXX XXXX XXXX XXXX" type="text" class="form-control">
+          <input [(ngModel)]="noCartao" id="noCartao" placeholder="XXXX XXXX XXXX XXXX" type="number" class="form-control">
         </div>
         <div class="col-md-2">
           <label>Código de segurança</label>
-          <input [(ngModel)]="cvv" id="cvv" placeholder="XXX" type="text" class="form-control">
+          <input [(ngModel)]="cvv" id="cvv" placeholder="XXX" type="number" class="form-control">
         </div>
         <div class="col-md-2">
           <label>Mês de Validade</label>

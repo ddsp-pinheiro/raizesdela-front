@@ -1,47 +1,55 @@
 <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#"><img id="logo-top" src="https://i.imgur.com/wfdiIWQ.png" alt="Logo"></a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Categorias
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Legumes</a>
-                    <a class="dropdown-item" href="#">Verduras</a>
-                    <a class="dropdown-item" href="#">Frutas</a>
-                    <a class="dropdown-item" href="#">Artesanatos</a>
-                    <a class="dropdown-item" href="#">Doces</a>
-                    <a class="dropdown-item" href="#">Laticínios</a>
-                    <a class="dropdown-item" href="#">Veganos</a>
-                    <a class="dropdown-item" href="#">Reciclados</a>
-                    <a class="dropdown-item" href="#">Outros</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Todos os produtos</a>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#">Produtoras</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Sobre nós</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <div id="divBusca">
-                <input type="search" id="txtBusca" placeholder="Pesquisar..." />
-                <button class="btn" type="submit" id="cor"><i id="cor" class="fa fa-search"
-                        aria-hidden="true"></i></button>
-            </div>
-        </form>
-        <a id="login" routerLink='/login'><i class="fa fa-user-circle" aria-hidden="true"></i> Login</a>
-        <a routerLink='/carrinho'><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-    </div>
+  <a class="navbar-brand" href="#"><img id="logo-top" src="https://i.imgur.com/wfdiIWQ.png" alt="Logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+      aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Categorias
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Legumes</a>
+                  <a class="dropdown-item" href="#">Verduras</a>
+                  <a class="dropdown-item" href="#">Frutas</a>
+                  <a class="dropdown-item" href="#">Artesanatos</a>
+                  <a class="dropdown-item" href="#">Doces</a>
+                  <a class="dropdown-item" href="#">Laticínios</a>
+                  <a class="dropdown-item" href="#">Veganos</a>
+                  <a class="dropdown-item" href="#">Reciclados</a>
+                  <a class="dropdown-item" href="#">Outros</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Todos os produtos</a>
+              </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Produtoras</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Sobre nós</a>
+          </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+          <div id="divBusca">
+              <input type="search" id="txtBusca" placeholder="Pesquisar..." />
+              <button class="btn" type="submit" id="cor"><i id="cor" class="fa fa-search"
+                      aria-hidden="true"></i></button>
+          </div>
+      </form>
+      <!-- Exemplo de único botão danger -->
+<div class="btn-group">
+  <button id="vender" type="button" class="btn btn-verde dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Vender
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" routerLink='/cad-produto'>Cadastrar produto</a>
+    <a class="dropdown-item" routerLink='/meus-produtos'>Meus produtos</a>
+  </div>
+</div>
+      <a id="login" routerLink='/login'><i class="fa fa-user-circle" aria-hidden="true"></i> Login</a>
+      <a routerLink='/carrinho'><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+  </div>
 </nav>
