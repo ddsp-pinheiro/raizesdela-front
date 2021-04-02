@@ -62,3 +62,11 @@ img{
 #cor{
   color:black;
 }
+
+#vender {
+    color: white;
+}
+
+#vender:hover{
+    color: black;
+}

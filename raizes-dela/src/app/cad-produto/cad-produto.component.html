@@ -30,8 +30,6 @@
                     <label>Categoria</label>
                     <select [(ngModel)]='idCategoria' (change)= "findCategoriaById()" class="form-control">
                         <option *ngFor="let eita of listaCategoria" value="{{eita.id}}">{{eita.nome}}</option>
-                        <option>Categoria 2</option>
-                        <option>Categoria 3</option>
                     </select>
                 </div>
                 <div class="form-group">
