@@ -45,7 +45,7 @@
     </div>
     <div class="col-md-3">
       <label>CEP</label>
-      <input [(ngModel)]="cep" id="cep" placeholder="XXXXX-XXX" type="text" pattern="\d{5}-\d{3}" maxlenght="8" class="form-control">
+      <input [(ngModel)]="cep" id="cep" placeholder="XXXXX-XXX" type="text" maxlength="9" class="form-control" (keyup)="mascaraCEP()">
     </div>
   </div>
   <nav class="mb-3">
@@ -83,18 +83,18 @@
         </div>
         <div class="col-md-4">
           <label>Número do CPF</label>
-          <input [(ngModel)]="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX" type="number" class="form-control">
+          <input [(ngModel)]="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX" type="text" class="form-control" maxlength="14" (keyup)="mascaraCPF()">
         </div>
       </div>
 
       <div class="form-row mb-3">
         <div class="col-md-6">
           <label>Número do Cartão</label>
-          <input [(ngModel)]="noCartao" id="noCartao" placeholder="XXXX XXXX XXXX XXXX" type="number" class="form-control">
+          <input [(ngModel)]="noCartao" id="noCartao" placeholder="XXXX XXXX XXXX XXXX" type="text" class="form-control" maxlength="19"(keyup)="mascaraNo()">
         </div>
         <div class="col-md-2">
           <label>Código de segurança</label>
-          <input [(ngModel)]="cvv" id="cvv" placeholder="XXX" type="number" class="form-control">
+          <input [(ngModel)]="cvv" id="cvv" placeholder="XXX" type="text" class="form-control" maxlength="3"(keyup)="mascaraCVV()">
         </div>
         <div class="col-md-2">
           <label>Mês de Validade</label>

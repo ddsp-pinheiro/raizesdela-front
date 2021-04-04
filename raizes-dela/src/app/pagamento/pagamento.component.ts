@@ -11,12 +11,12 @@ export class PagamentoComponent implements OnInit {
   //formulario endereco
   endereco: string
   cidade: string
-  cep: number
+  cep: string
   //formulario cartao
    nomeCartao: string
-   noCartao: number
-   cpf: number
-   cvv: number
+   noCartao: string
+   cpf: string
+   cvv: string
 
   constructor(private router:Router) { }
 
@@ -50,5 +50,27 @@ export class PagamentoComponent implements OnInit {
   sucesso(){
     alert("Pagamento realizado com sucesso! Aguarde email de confirmação da compra.")
     this.router.navigate (['/home'])
+  }
+
+  mascaraCEP(){
+    this.cep =this.cep.replace(/\D/g,"")                 //Remove tudo o que não é dígito
+    this.cep =this.cep.replace(/(\d{5})(\d)/,"$1-$2")    //Coloca hífen entre o quarto e o quinto dígitos
+    return this.cep
+  }
+
+  mascaraCPF(){
+    this.cpf =this.cpf.replace(/\D/g,"")                 //Remove tudo o que não é dígito
+    this.cpf =this.cpf.replace(/(\d{3})(\d{3})(\d{3})(\d)/,"$1.$2.$3-$4")
+    return this.cpf
+  }
+  mascaraNo(){
+    this.noCartao = this.noCartao.replace(/\D/g,"")
+    this.noCartao = this.noCartao.replace(/(\d{4})(\d{4})(\d{4})(\d)/,"$1 $2 $3 $4")
+    return this.noCartao
+  }
+
+  mascaraCVV(){
+    this.cvv =this.cvv.replace(/\D/g,"")  //Remove tudo o que não é dígito
+    return this.cvv
   }
 }
