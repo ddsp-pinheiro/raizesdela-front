@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'raizes-dela';
 
-  /*constructor(
+  constructor(
     public auth: AuthService
-  ){}*/
+  ){}
 }
