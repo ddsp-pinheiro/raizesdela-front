@@ -8,6 +8,7 @@ import { CadProdutoComponent } from './cad-produto/cad-produto.component';
 import { ProdutorasComponent } from './produtoras/produtoras.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'produtoras', component: ProdutorasComponent},
   {path: 'sobre-nos', component: SobreNosComponent},
   {path: 'pagamento', component: PagamentoComponent},
-  {path: 'home', component: HomeComponent}
+  {path: 'home', component: HomeComponent},
+  {path: 'user-edit/:id', component: UserEditComponent}
 ];
 
 @NgModule({

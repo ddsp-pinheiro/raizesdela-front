@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { ProdutorasComponent } from './produtoras/produtoras.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
     CadastrarComponent,
     ProdutorasComponent,
     SobreNosComponent,
-    PagamentoComponent
+    PagamentoComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
