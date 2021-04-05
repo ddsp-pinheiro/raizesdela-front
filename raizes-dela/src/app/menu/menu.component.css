@@ -50,6 +50,7 @@ img{
   border-radius:15px;
   width: 500px;
   display: flex;
+  position: relative;
 }
 #txtBusca{
   float:left;
@@ -70,3 +71,4 @@ img{
 #vender:hover{
     color: black;
 }
+

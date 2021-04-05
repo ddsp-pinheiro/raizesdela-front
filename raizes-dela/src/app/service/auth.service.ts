@@ -23,10 +23,6 @@ export class AuthService {
     return this.http.post<Usuario>('http://localhost:8080/usuario/cadastrar', user)
   }
 
-  // cadProduto(produto: Produto): Observable<Produto>{
-  //   return this.http.post<Produto>('http://localhost:8080/usuario/produto', produto)
-  //}
-
  /* vendedora(){
     let ok = false
 
