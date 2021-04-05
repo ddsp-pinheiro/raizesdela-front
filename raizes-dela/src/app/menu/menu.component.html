@@ -41,7 +41,7 @@
         </form>
         <!-- Exemplo de único botão danger -->
         <div class="btn-group">
-            <button *ngIf="authService.logado()" id="vender" type="button" class="btn btn-verde dropdown-toggle" data-toggle="dropdown"
+            <button *ngIf="authService.logado() && authService.dadosUser().tipoVendedor==true" id="vender" type="button" class="btn btn-verde dropdown-toggle" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Vender
             </button>

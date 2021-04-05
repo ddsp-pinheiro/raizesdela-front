@@ -45,7 +45,7 @@ export class AuthService {
 
   menuRodapeOff(){
     let ok: boolean = true
-    if(this.router.url == '/login' || this.router.url == "/cadastrar"){
+    if(this.router.url == '/login' || this.router.url == "/cadastrar" || this.router.url == "/user-edit"){
       ok = false
     }
     return ok
