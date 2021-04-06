@@ -1,15 +1,39 @@
 <body>
-    <div id="grup">
-          <img src="https://img.freepik.com/fotos-gratis/mandioca-organica-mandioca-mandioca-aipim-culinaria-brasileira-na-mesa-de-madeira-rustica_59529-637.jpg?size=626&ext=jpg" alt="">
-        <div class="col-5" id="txt-grup">
-                <h2>MANDIOCAAAAAAA</h2>
-                <h1>R$ 300,00</h1>
-                <button type="button" class="btn w-100">Adicionar ao carrinho</button>
-            <div id="descricao">
-                <p><strong>DESCRIÇÃO:</strong> Lorem dolor sit amet consectetur adipisicing elit. Repellendus ut vero eveniet soluta nam
-                    architecto, culpa blanditiis fugit! Fugit at aspernatur deserunt illo doloribus expedita, earum
-                    consequuntur mollitia. Aliquid, quidem.</p>
-            </div>
+  <div id="grup">
+    <img src={{produto.imagem}}>
+    <!-- <img src="https://img.freepik.com/fotos-gratis/mandioca-organica-mandioca-mandioca-aipim-culinaria-brasileira-na-mesa-de-madeira-rustica_59529-637.jpg?size=626&ext=jpg" alt=""> -->
+    <div class="col-5" id="txt-grup">
+      <h2>{{produto.nome}}</h2>
+      <h5>Categoria {{produto.categoria.nome}}</h5>
+      <!-- <h2>MANDIOCAAAAAAA</h2> -->
+      <h1>R${{produto.valor.toFixed(2)}}</h1>
+
+      <!-- <h1>R$ 300,00</h1> -->
+
+      <!--Nova div quantidade-->
+      <div id="quantrow" class="row">
+        <div class="col-md-5">
+          <p> Quantidade:</p>
         </div>
+        <div class="col-md-1">
+          <p></p>
+        </div>
+        <div class="col-md-5" id="quantidade">
+          <input type="button" id="minus" value="-" (click)="process(-1)" (click)="parcial()" />
+          <input [(ngModel)]="quant" id="quant" name="quant" class="text" size="1" value="1" type="text"
+            maxlength="2" />
+          <input type="button" id="plus" value="+" (click)="process(1)" (click)="parcial()">
+        </div>
+      </div>
+      <!--Fim nova div-->
+
+      <button type="button" class="btn w-100" (click)="addCarrinho()">Adicionar ao carrinho</button>
+      <div id="descricao">
+        <p><strong>DESCRIÇÃO: </strong>{{produto.descricao}}</p>
+        <!-- Lorem dolor sit amet consectetur adipisicing elit. Repellendus ut vero eveniet soluta nam
+                architecto, culpa blanditiis fugit! Fugit at aspernatur deserunt illo doloribus expedita, earum
+                consequuntur mollitia. Aliquid, quidem. -->
+      </div>
     </div>
+  </div>
 </body>

@@ -9,40 +9,88 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carrinho.component.css']
 })
 export class CarrinhoComponent implements OnInit {
-  produto: Produto
+  produto: Produto = new Produto
   carrinho: Produto[]
+  vParcial: number
+  vTotal: number
+  vazio: string
   quant: number
-  vParcial:number
-  vTotal:number
+  carrinhoOb = {
+    valor: 0
+  }
 
   constructor(
     private authService: AuthService,
     private router: Router
   ) { }
 
-  ngOnInit(){
-    this.quant=1
-    this.parcial()
-    this.vTotal = 0
+  ngOnInit() {
     this.total()
+    this.exibirCarrinho()
   }
 
-  process(value: number){
-    value+= this.quant;
-    if(value < 1){
-      this.quant= 1;
-    }else{
-      this.quant= value;
+  // process(value: number) {
+  //   value += this.quant;
+  //   if (value < 1) {
+  //     this.quant = 1;
+  //   } else {
+  //     this.quant = value;
+  //   }
+  // }
+
+  exibirCarrinho() {
+    let localS = localStorage['carrinho']
+    if (localS.length > 0) {
+      this.carrinho = localS ? JSON.parse(localS) : []
+    } else {
+      this.vazio = "O Carrinho está vazio"
+      this.vTotal = 0
     }
   }
-  parcial(){
-    this.vParcial = 2 * this.quant
-    return this.vParcial
+
+
+  // userOb = {
+  //   nome: '',
+  //   user: '',
+  //   senha: ''
+  // }
+
+  // let users = []
+  // users = JSON.parse(localStorage.getItem('lista_users'))
+
+  // users.forEach((i) => {
+
+  //     userOb = {
+  //       nome: i.nome,
+  //       user: i.user,
+  //       senha: i.senha
+  //     }
+  // })
+
+
+  // let dadosProd = []
+  // dadosProd = JSON.parse(localStorage.getItem('carrinho'))
+
+  // dadosProd.forEach((i) => {
+  //   carrinhoOb = {
+  //     valor: i.valorParcial
+  //   }
+  // })
+
+
+  total() {
+    this.vTotal = 0
+    let dadosProd = []
+    dadosProd = JSON.parse(localStorage.getItem('carrinho') || '{}')
+    dadosProd.forEach((i) => {
+      this.carrinhoOb = {
+        valor: i.valorParcial
+      }
+
+
+      this.vTotal = this.carrinhoOb.valor + this.vTotal
+    })
+    return this.vTotal.toFixed(2)
   }
 
-  total(){
-    this.vTotal=0
-      this.vTotal=this.vParcial+this.vTotal
-    }
-
-  }
+}

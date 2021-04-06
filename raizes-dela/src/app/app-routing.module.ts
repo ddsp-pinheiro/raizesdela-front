@@ -1,3 +1,5 @@
+import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
+import { ProdutoComponent } from './produto/produto.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -14,10 +16,12 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'cadastrar', component:CadastrarComponent},
   {path: 'carrinho', component: CarrinhoComponent},
+  {path: 'produto/:id', component: ProdutoComponent},
   {path: 'cad-produto', component: CadProdutoComponent},
+  {path: 'meus-produtos',component: MeusProdutosComponent},
   {path: 'produtoras', component: ProdutorasComponent},
   {path: 'sobre-nos', component: SobreNosComponent},
-  {path: 'pagamento', component: PagamentoComponent},
+  {path: 'pagamento/:total', component: PagamentoComponent},
   {path: 'home', component: HomeComponent}
 ];
 

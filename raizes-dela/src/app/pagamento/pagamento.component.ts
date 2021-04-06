@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pagamento',
@@ -17,11 +17,17 @@ export class PagamentoComponent implements OnInit {
    noCartao: string
    cpf: string
    cvv: string
+   //total
+   total:number
 
-  constructor(private router:Router) { }
+  constructor(
+    private router:Router,
+    private route: ActivatedRoute
+    ) { }
 
   ngOnInit(){
     window.scroll(0,0)
+    this.total= this.route.snapshot.params['total']
   }
 
    validaBoleto(){

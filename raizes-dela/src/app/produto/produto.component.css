@@ -31,3 +31,62 @@ button{
     border-radius: 30px;
     background-color: #dda25eb9;
 }
+
+h2{
+  font-size: 50px;
+ }
+
+ h1{
+  color: #BC6C25;
+  font-size: 70px;
+ }
+h5{
+  color:  #606C38;
+}
+ img{
+   max-width: 700px;
+ }
+ #quantidade{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #606c38c9;
+  border-radius:15px;
+  max-width: 75px;
+  height: 30px;
+  display: flex;
+  margin: 0px;
+}
+#minus{
+  float:left;
+  background-color:transparent;
+  color: white;
+  font-size:18px;
+  font-weight: bold;
+  border: none;
+  margin: 0px;
+}
+
+#plus{
+  float:right;
+  background-color:transparent;
+  color: white;
+  font-size:18px;
+  font-weight: bold;
+  border: none;
+  margin: 0px;
+}
+
+ #quant{
+  background-color: white;
+  border: none;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  margin: 0px;
+}
+
+#quantrow{
+  align-items: baseline;
+  margin-top: 20px;
+}

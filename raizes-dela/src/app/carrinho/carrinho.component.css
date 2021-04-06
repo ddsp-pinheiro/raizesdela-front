@@ -1,23 +1,22 @@
 h2{
   text-align: center;
   color: #283618;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 .row{
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0px;
-
 }
 #container-produto{
 
     background-color: #dda25e98;
     border-radius: 10px;
     width: 800px;
+    padding: 20px;
 }
 #produto{
-  margin: 10vh;
   text-align: center;
 }
 #produto img{
@@ -44,12 +43,19 @@ h2{
     text-align: right;
 }
 #comprar{
-    width: 40vh;
+    width: 30vh;
     margin-bottom: 5vh;
-    font-size: 15pt;
-    padding: 2vh;
+    font-size: 12pt;
     color: white;
     background-color: #283618;
+}
+
+#continuar{
+    width: 30vh;
+    margin-bottom: 5vh;
+    font-size: 12pt;
+    color: white;
+    background-color: #946128;
 }
 
 #quantidade{
@@ -90,4 +96,9 @@ h2{
   width: 25px;
   text-align: center;
   margin: 0px;
+}
+
+#vazio{
+  text-align: center;
+  color: #BC6C25;
 }
