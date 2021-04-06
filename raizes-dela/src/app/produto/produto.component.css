@@ -23,11 +23,11 @@ button{
 }
 .btn{
     color: white;
-    background-color: #283618;
+    background-color: #1c372c;
 }
 #descricao{
     display: flex;
     padding: 30px;
     border-radius: 30px;
-    background-color: #dda25eb9;
+    background-color: #884f0ece;
 }

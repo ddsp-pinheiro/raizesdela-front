@@ -1,6 +1,6 @@
 h2{
   text-align: center;
-  color: #283618;
+  color: #1c372c;
   margin-bottom: 0px;
 }
 .row{
@@ -12,7 +12,7 @@ h2{
 }
 #container-produto{
 
-    background-color: #dda25e98;
+    background-color: #884f0e;
     border-radius: 10px;
     width: 800px;
 }
@@ -49,7 +49,7 @@ h2{
     font-size: 15pt;
     padding: 2vh;
     color: white;
-    background-color: #283618;
+    background-color: #1c372c;
 }
 
 #quantidade{
