@@ -21,9 +21,9 @@ const routes: Routes = [
   {path: 'produtoras', component: ProdutorasComponent},
   {path: 'sobre-nos', component: SobreNosComponent},
   {path: 'pagamento/:total', component: PagamentoComponent},
-  {path: 'home', component: HomeComponent}
+  {path: 'home', component: HomeComponent},
   {path: 'user-edit/:id', component: UserEditComponent}
-
+]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
