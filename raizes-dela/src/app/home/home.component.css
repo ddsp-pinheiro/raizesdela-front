@@ -1,108 +1,129 @@
-.btn-verde{
-    color: white;
-    background-color: #283618;
+.btn-verde {
+  color: white;
+  background-color: #1c372c;
 }
 
 .btn-verde:hover {
-    background-color: #606C38;
+  background-color: #346350;
 }
 
-.cards{
-    justify-content: space-around;
-    display: flex;
-    margin-bottom: 15vh;
+.cards {
+  justify-content: space-around;
+  display: flex;
+  margin-bottom: 15vh;
 }
-.pb-pt-15{
-    margin-bottom: 15vh;
-    margin-top: 5vh;
+.pb-pt-15 {
+  margin-bottom: 15vh;
+  margin-top: 5vh;
 }
 
-#mg-pr{
-    text-align: center;
-    margin-bottom: 5vh;
+#mg-pr {
+  text-align: center;
+  margin-bottom: 5vh;
 }
 
 #img-redo {
-    width: 250px;
-    height: 250px;
-    justify-content: center;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
 }
 
 #text1 {
-    justify-content: center;
+  justify-content: center;
 }
 
 #button1 {
-    text-align: center;
-    padding-bottom: 100px;
+  text-align: center;
+  padding-bottom: 100px;
 }
 
 .card-deck {
-    align-items: center;
+  align-items: center;
 }
 
 .title {
-    color: #606C38;
-    font-size: 15px;
-    margin: 0;
-    text-align: center;
-    display: table;
-    margin: 0 auto;
-    position: relative;
-    text-transform: uppercase;
+  color: #1c372c;
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+  display: table;
+  margin: 0 auto;
+  position: relative;
+  text-transform: uppercase;
 }
 
 .title::after {
-    display: table;
-    content: '';
-    width: 60px;
-    height: 3px;
-    background-color: #606C38;
-    position: absolute;
-    left: 120%;
-    top: 9px;
-    border-radius: 10px;
+  display: table;
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #1c372c;
+  position: absolute;
+  left: 120%;
+  top: 9px;
+  border-radius: 10px;
 }
 
 .title::before {
-    display: table;
-    content: '';
-    width: 60px;
-    height: 3px;
-    background-color: #606C38;
-    position: absolute;
-    right: 120%;
-    top: 9px;
-    border-radius: 10px;
+  display: table;
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #1c372c;
+  position: absolute;
+  right: 120%;
+  top: 9px;
+  border-radius: 10px;
 }
 
 .cardInfo {
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .fotoPrincipal {
-    margin-bottom: 80px;
-    margin-top: 30px;
+  margin-bottom: 80px;
+  margin-top: 30px;
 }
 
 .title1 {
-    padding-top: 10px;
-    padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 50px;
 }
 
 #carouselExampleIndicators {
-    padding-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .imgRedondas {
-    padding-top: 20px;
+
+  padding-top: 20px;
 }
 
 .ultimaImg {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .botaop {
-    padding-left: 50px;
-    padding-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@font-face {
+  font-family: bastian;
+  src: url(/assets/fontes/bastian_sidney/Bastian\ Sidney.ttf);
+}
+h3{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: bastian;
+  font-size: 55pt;
+  position: absolute;
+  padding-top: 110px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.623);
+  background-origin: padding-box;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
