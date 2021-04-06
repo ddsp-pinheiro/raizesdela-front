@@ -1,22 +1,29 @@
-#titulo{
-  margin-top: 1%;
-  text-align: center;
-}
-.imagemTexto{
-  display: flex;
+section{
+
   align-items: center;
-  margin-top: 80px;
+  justify-content: center;
+  height: 65vh;
 }
-.teste{
- margin-left: 25%;
-
-}
-.legenda{
-  font-size: smaller;
+h1{
   text-align: center;
+  margin: 5vh;
+  margin-bottom: 10vh;
+}
+.bb{
+  justify-content: center;
+}
+#tamanho{
+  height: 300px;
+  width: 296px;
 }
 
-.imagem{
- height: 290px;
-
+.img {
+  float: left;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 175px;
+  shape-outside: circle(50% at 120px 140px);
 }
+
+
+
