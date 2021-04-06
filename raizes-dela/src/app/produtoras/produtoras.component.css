@@ -1,0 +1,22 @@
+#titulo{
+  margin-top: 1%;
+  text-align: center;
+}
+.imagemTexto{
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+.teste{
+ margin-left: 25%;
+
+}
+.legenda{
+  font-size: smaller;
+  text-align: center;
+}
+
+.imagem{
+ height: 290px;
+
+}

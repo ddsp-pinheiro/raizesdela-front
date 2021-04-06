@@ -50,6 +50,7 @@ img{
   border-radius:15px;
   width: 500px;
   display: flex;
+  position: relative;
 }
 #txtBusca{
   float:left;
@@ -69,4 +70,78 @@ img{
 
 #vender:hover{
     color: black;
+}
+
+.navbar{
+  background-color: #1c372c;
+}
+#logo-top{
+  height: 60px;
+}
+img{
+margin-left: 15px;
+margin-right: 20px;
+}
+.navbar form{
+  margin-right: 150px;
+}
+.navbar input{
+  width: 500px;
+}
+.nav-item a{
+  color: white;
+}
+.fa-search{
+  font-size: 20px;
+  color: white;
+}
+.fa-search:hover{
+  color: black;
+}
+.fa-shopping-cart{
+  margin-right:30px ;
+  color: white;
+}
+.fa-shopping-cart:hover{
+  color: black;
+}
+#login{
+  text-decoration: none;
+  margin-right: 30px;
+  color: white;
+}
+#login:hover{
+  color: black;
+}
+.dropdown-menu a{
+  color: black;
+}
+
+
+/****/
+#divBusca{
+background-color: white;
+border-radius:15px;
+width: 500px;
+display: flex;
+position: relative;
+}
+#txtBusca{
+float:left;
+background-color:transparent;
+padding-left: 20px;
+font-style:italic;
+font-size:15px;
+border:none;
+}
+#cor{
+color:black;
+}
+
+#vender {
+  color: white;
+}
+
+#vender:hover{
+  color: black;
 }

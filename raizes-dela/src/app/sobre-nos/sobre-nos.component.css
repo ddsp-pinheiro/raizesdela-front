@@ -1,0 +1,106 @@
+#verde {
+  align-items: center;
+  height: 75vh;
+  width: 100%;
+  background-color: #283618;
+}
+#cont-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col-11 {
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 8vh;
+  display: flex;
+  text-align: justify;
+}
+h1 {
+  font-size: 65pt;
+  color: white;
+}
+.col-11 img {
+  margin-left: 30px;
+  height: 60vh;
+}
+/*-------------------------------------*/
+#sobre {
+  display: flex;
+  justify-content: space-around;
+  margin: 15vh;
+}
+h2 {
+  margin-top: 2.5vh;
+}
+.col-3 img {
+  width: 240px;
+}
+#redondo{
+  border-radius: 50%;
+}
+/*--------------------------------------*/
+.card-img{
+  height: 50px;
+  width: 50px;
+}
+#ee {
+  margin-left: 42.5%;
+}
+#equipe {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: center;
+}
+#cont-2 {
+  display: flex;
+  justify-content: center;
+}
+h5 {
+  font-size: 11pt;
+}
+.card-body p {
+  justify-content: center;
+  color: rgb(116, 116, 116);
+  font-size: 10pt;
+}
+.card {
+  padding: 5px;
+  margin: 2.5px;
+}
+a {
+  color: rgb(116, 116, 116);
+  font-size: 35pt;
+  text-decoration: none;
+}
+a:hover{
+  color: black;
+}
+.fa-github{
+  margin-left: 40px;
+}
+/*-------------------------------------------*/
+.col-5 {
+  align-items: center;
+}
+.col-2 {
+  text-align: center;
+}
+#ut {
+  align-items: center;
+}
+#parte {
+  height: 75vh;
+  display: flex;
+}
+#co {
+}
+#ou {
+  font-size: 30pt;
+  color: rgb(29, 29, 29);
+}
+#txt {
+  font-size: 45pt;
+  color: white;
+}

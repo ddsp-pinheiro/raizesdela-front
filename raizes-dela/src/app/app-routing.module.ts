@@ -1,4 +1,3 @@
-import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { HomeComponent } from './home/home.component';
@@ -10,6 +9,7 @@ import { CadProdutoComponent } from './cad-produto/cad-produto.component';
 import { ProdutorasComponent } from './produtoras/produtoras.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -18,12 +18,11 @@ const routes: Routes = [
   {path: 'carrinho', component: CarrinhoComponent},
   {path: 'produto/:id', component: ProdutoComponent},
   {path: 'cad-produto', component: CadProdutoComponent},
-  {path: 'meus-produtos',component: MeusProdutosComponent},
   {path: 'produtoras', component: ProdutorasComponent},
   {path: 'sobre-nos', component: SobreNosComponent},
   {path: 'pagamento/:total', component: PagamentoComponent},
   {path: 'home', component: HomeComponent}
-];
+  {path: 'user-edit/:id', component: UserEditComponent}
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
