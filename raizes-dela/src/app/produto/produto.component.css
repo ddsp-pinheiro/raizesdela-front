@@ -23,13 +23,13 @@ button{
 }
 .btn{
     color: white;
-    background-color: #283618;
+    background-color: #1c372c;
 }
 #descricao{
     display: flex;
     padding: 30px;
     border-radius: 30px;
-    background-color: #dda25eb9;
+    background-color: #df7905cc;
 }
 
 h2{
@@ -37,11 +37,11 @@ h2{
  }
 
  h1{
-  color: #BC6C25;
+  color: #884f0e;
   font-size: 70px;
  }
 h5{
-  color:  #606C38;
+  color:  #1c372c;
 }
  img{
    max-width: 700px;
@@ -50,7 +50,7 @@ h5{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #606c38c9;
+  background-color: #1c372c;
   border-radius:15px;
   max-width: 75px;
   height: 30px;

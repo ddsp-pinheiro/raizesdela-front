@@ -1,10 +1,10 @@
 .fundo{
-    background-color: #BC6C25;
+    background-color: #884f0e;
     height: 1vh;
-  
+
   }
   .backgroud{
-    background-color: #BC6C25;
+    background-color: #884f0e;
     height: 50vh;
     width: 100vw;
     display: flex;
@@ -14,21 +14,21 @@
     height: 100px;
     align-self: flex-start;
     margin: 25px;
-  
+
   }
-  
+
   #d-color{
       background-color: white;
       justify-content: center;
       align-items: center;
-      height: 85vh;
+      height: 90vh;
       min-width: 30vw;
       margin: 5vh;
       padding: 30px;
       border-radius: 50px;
       margin-top: 67px;
       box-shadow: 2px 1px 1em;
-  
+
   }
   .center{
       text-align: center;
@@ -36,7 +36,7 @@
   }
   .btn{
       color: white;
-      background-color: #283618;
+      background-color: #1c372c;
   }
   #enviar{
       margin-top: 30px;
@@ -46,7 +46,7 @@
   #l-cadastro{
       margin-top: 10px;
   }
-  
+
   #vendedora{
       text-align: center;
   }
@@ -55,6 +55,5 @@
   }
   #cadastrar{
       margin-right: 15px;
-      background-color: #BC6C25;
+      background-color: #884f0e;
   }
-  

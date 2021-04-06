@@ -1,6 +1,6 @@
 h2{
   text-align: center;
-  color: #283618;
+  color: #1c372c;
   margin-bottom: 20px;
 }
 .row{
@@ -11,7 +11,7 @@ h2{
 }
 #container-produto{
 
-    background-color: #dda25e98;
+    background-color: #df7905cc;
     border-radius: 10px;
     width: 800px;
     padding: 20px;
@@ -47,7 +47,7 @@ h2{
     margin-bottom: 5vh;
     font-size: 12pt;
     color: white;
-    background-color: #283618;
+    background-color: #1c372c;
 }
 
 #continuar{
@@ -55,14 +55,14 @@ h2{
     margin-bottom: 5vh;
     font-size: 12pt;
     color: white;
-    background-color: #946128;
+    background-color: #884f0e;
 }
 
 #quantidade{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #BC6C25;
+  background-color: #884f0e;
   border-radius:15px;
   max-width: 75px;
   height: 30px;
@@ -100,5 +100,5 @@ h2{
 
 #vazio{
   text-align: center;
-  color: #BC6C25;
+  color: #884f0e;
 }

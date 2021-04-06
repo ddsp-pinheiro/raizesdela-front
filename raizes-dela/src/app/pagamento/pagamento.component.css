@@ -1,22 +1,22 @@
 .h2{
- color: #283618;
+ color: #1c372c;
 }
 
 #valorTotal{
- color: #BC6C25;
+ color: #884f0e;
  font-size: 70px;
 }
 .nav-link{
-  color: #606c387e;
+  color: #1c372c;
 }
 .btn-verde{
   color: white;
-  background-color: #283618;
+  background-color: #1c372c;
   margin-bottom: 30px;
 }
 
 .btn-tijolo{
   color: white;
-  background-color: #BC6C25;
+  background-color: #884f0e;
   margin-bottom: 30px;
 }
