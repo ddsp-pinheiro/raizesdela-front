@@ -20,6 +20,7 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     PagamentoComponent,
     UserEditComponent,
     ProdutoEditComponent,
-    ProdutoDeleteComponent
+    ProdutoDeleteComponent,
+    MeusProdutosComponent
   ],
   imports: [
     BrowserModule,

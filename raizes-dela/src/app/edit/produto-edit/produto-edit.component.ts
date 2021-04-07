@@ -74,9 +74,8 @@ export class ProdutoEditComponent implements OnInit {
     }else {
       this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=> {
         this.produto = resp
-          this.router.navigate(['/cad-Produto'])
           alert ('Produto editado com sucesso!')
-          this.router.navigate(["/home"])
+          this.router.navigate(["/meus-produtos"])
       })
     }
   }

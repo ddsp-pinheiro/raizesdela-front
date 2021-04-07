@@ -16,7 +16,7 @@
 		<div class="col-md-4">
 
             <div class="card">
-                <img class="img-fluid" alt="Produto sem imagem" src="{{produto.imagem}}">
+                <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
                 <div class="card-body">
                     <h4 class="card-title">{{produto.nome}}</h4>
                     <small class="text-muted">Categoria: {{produto.categoria.nome}}</small>
@@ -31,7 +31,7 @@
 
 	<div class="row mt-5">
         <div class="col-md-12 d-flex justify-content-center">
-            <button routerLink='/home' type="submit" class="btn mr-4" id="btn-1">Cancelar</button>
+            <button routerLink='/meus-produtos' type="submit" class="btn mr-4" id="btn-1">Cancelar</button>
             <button (click)='apagar()' type="submit" class="btn" id="btn-2">Apagar</button>
         </div>
 	</div>
