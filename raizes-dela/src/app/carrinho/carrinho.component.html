@@ -3,37 +3,18 @@
   <h5 id="vazio">{{vazio}}</h5>
 
   <div class=" container-fluid" id="container-produto">
-    <div class="row d-flex justify-content-cente" id="titulos">
-      <div class="col-md-2 text-center">
-        <h5>Foto</h5>
-      </div>
-      <div class="col-md-3 text-center">
-        <h5>Produto</h5>
-      </div>
-      <div class="col-md-2 text-center">
-        <h5>Preço</h5>
-      </div>
-      <div class="col-md-2 text-center">
-        <h5>Quantidade</h5>
-      </div>
-      <div class="col-md-3 text-center">
-        <h5>Valor Parcial</h5>
-      </div>
-    </div>
+
     <div class="row" id="produto" *ngFor="let item of carrinho">
 
-      <div class="col-md-2"> <img src={{item.imagem}} alt=""></div>
+      <div class="col-md-2"> <img class="rounded-circle" src={{item.imagem}} alt=""></div>
       <!--"https://cd.shoppub.com.br/beirario/media/cache/fc/5c/fc5c9341d00c5d9598f6eb629344e42e.jpg"-->
       <div class="col-md-3">
         <p id="nome">{{item.nome}}</p>
-      </div>
-
-      <div class="col-md-2">
         <p id="preco">R$ {{item.valor.toFixed(2)}}</p>
       </div>
 
       <div class="col-md-2">
-        <p>{{item.quantidade}}</p>
+        <p id="quantidade">X{{item.quantidade}}</p>
       </div>
 
       <div class="col-md-3">
