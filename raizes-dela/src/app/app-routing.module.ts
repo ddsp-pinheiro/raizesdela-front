@@ -10,6 +10,9 @@ import { ProdutorasComponent } from './produtoras/produtoras.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
+import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -22,8 +25,12 @@ const routes: Routes = [
   {path: 'sobre-nos', component: SobreNosComponent},
   {path: 'pagamento/:total', component: PagamentoComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'user-edit/:id', component: UserEditComponent}
-]
+  {path: 'user-edit/:id', component: UserEditComponent},
+  {path: 'produto-edit/:id', component: ProdutoEditComponent},
+  {path: 'produto-delete/:id', component: ProdutoDeleteComponent},
+  {path: 'meus-produtos', component: MeusProdutosComponent}
+];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
