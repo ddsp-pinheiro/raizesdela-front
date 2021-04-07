@@ -18,6 +18,7 @@ import { ProdutorasComponent } from './produtoras/produtoras.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     ProdutorasComponent,
     SobreNosComponent,
     PagamentoComponent,
-    UserEditComponent
+    UserEditComponent,
+    ProdutoEditComponent
   ],
   imports: [
     BrowserModule,
