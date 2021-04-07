@@ -39,12 +39,12 @@ export class MeusProdutosComponent implements OnInit {
       this.router.navigate(["/home"]);
     }
     
-    this.findAllProdutos();
+    this.findByIdUser();
   }
 
-  findAllProdutos() {
-    this.produtoService.getAllProduto().subscribe((resp: Produto[])=>{
-      this.listaProdutos = resp;
+  findByIdUser() {
+    this.authService.getByIdUser(this.idUsuario).subscribe((resp: Usuario)=>{
+      this.user = resp;
     });
   }
 
