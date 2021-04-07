@@ -15,8 +15,6 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class MeusProdutosComponent implements OnInit {
 
-  produto: Produto = new Produto();
-
   user: Usuario = new Usuario();
   idUsuario = environment.id;
 
