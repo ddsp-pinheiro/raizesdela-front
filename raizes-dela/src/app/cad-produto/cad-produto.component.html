@@ -34,11 +34,11 @@
                 </div>
                 <div class="form-group">
                     <label for="estoque">Estoque</label>
-                    <input [(ngModel)]='produto.estoque' type="text" class="form-control" id="estoque" placeholder="Digite a quantidade do estoque">
+                    <input [(ngModel)]='produto.estoque' type="number" class="form-control" id="estoque" placeholder="Digite a quantidade do estoque">
                 </div>
                 <div class="form-group">
                     <label for="valor">Valor</label>
-                    <input [(ngModel)]='produto.valor' type="text" class="form-control" id="valor" placeholder="Digite o preço do produto">
+                    <div class="d-flex align-items-center">R$<input [(ngModel)]='produto.valor' type="number" class="form-control" id="valor" placeholder="Digite o preço do produto"></div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
@@ -80,7 +80,7 @@
                     </div>
                     <div class="col-md-3 mb-3">
                         <label for="cep">CEP</label>
-                        <input type="text" class="form-control" id="cep">
+                        <input [(ngModel)]="cep" type="text" class="form-control" id="cep" placeholder="XXXXX-XXX" maxlength="9" (keyup)="mascaraCEP()">
                     </div>
                 </div>
             </div>

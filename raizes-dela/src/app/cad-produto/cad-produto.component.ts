@@ -25,6 +25,8 @@ export class CadProdutoComponent implements OnInit {
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
 
+  cep: string
+
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -67,5 +69,11 @@ export class CadProdutoComponent implements OnInit {
           this.produto = new Produto
       })
     }
+  }
+
+  mascaraCEP(){
+    this.cep =this.cep.replace(/\D/g,"")                 //Remove tudo o que não é dígito
+    this.cep =this.cep.replace(/(\d{5})(\d)/,"$1-$2")    //Coloca hífen entre o quarto e o quinto dígitos
+    return this.cep
   }
 }
