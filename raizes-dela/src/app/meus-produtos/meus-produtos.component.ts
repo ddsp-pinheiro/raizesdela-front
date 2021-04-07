@@ -16,19 +16,12 @@ import { ProdutoService } from '../service/produto.service';
 export class MeusProdutosComponent implements OnInit {
 
   produto: Produto = new Produto();
-  listaProdutos: Produto[];
-
-  categoria: Categoria = new Categoria();
-  listaCategorias: Categoria[];
-  idCategoria: number;
 
   user: Usuario = new Usuario();
   idUsuario = environment.id;
 
   constructor(
     private router: Router,
-    private produtoService: ProdutoService,
-    private categoriaService: CategoriaService,
     private authService: AuthService
   ) { }
 
