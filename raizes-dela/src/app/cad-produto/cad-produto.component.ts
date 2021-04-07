@@ -37,6 +37,11 @@ export class CadProdutoComponent implements OnInit {
   ngOnInit() {
     window.scroll(0,0)
 
+    if (environment.token == "") {
+      alert("Sua sessão expirou")
+      this.router.navigate(["/home"])
+    }
+
     this.getAllCategoria()
   }
 
@@ -64,9 +69,9 @@ export class CadProdutoComponent implements OnInit {
     } else {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=> {
         this.produto = resp
-          this.router.navigate(['/cad-produto'])
           alert ('Produto cadastrado com sucesso!')
           this.produto = new Produto
+          this.router.navigate(['/meus-produtos'])
       })
     }
   }
