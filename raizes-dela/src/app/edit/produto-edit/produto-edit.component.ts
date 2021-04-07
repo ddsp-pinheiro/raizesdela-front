@@ -17,6 +17,8 @@ export class ProdutoEditComponent implements OnInit {
 
   produto: Produto = new Produto
 
+  cep: string
+
   categoria: Categoria = new Categoria
   listaCategoria: Categoria[]
   idCategoria:number
@@ -25,7 +27,6 @@ export class ProdutoEditComponent implements OnInit {
   idUsuario = environment.id
 
   constructor(
-    private authService: AuthService,
     private router: Router,
     private route: ActivatedRoute,
     private categoriaService: CategoriaService,
@@ -60,6 +61,12 @@ export class ProdutoEditComponent implements OnInit {
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp:Categoria)=>{
       this.categoria = resp
     })
+  }
+
+  mascaraCEP(){
+    this.cep =this.cep.replace(/\D/g,"")                 //Remove tudo o que não é dígito
+    this.cep =this.cep.replace(/(\d{5})(\d)/,"$1-$2")    //Coloca hífen entre o quarto e o quinto dígitos
+    return this.cep
   }
 
   atualizar() {
