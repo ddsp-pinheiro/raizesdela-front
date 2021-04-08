@@ -1,3 +1,4 @@
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { HomeComponent } from './home/home.component';
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'user-edit/:id', component: UserEditComponent},
   {path: 'produto-edit/:id', component: ProdutoEditComponent},
   {path: 'produto-delete/:id', component: ProdutoDeleteComponent},
-  {path: 'meus-produtos', component: MeusProdutosComponent}
+  {path: 'meus-produtos', component: MeusProdutosComponent},
+  {path: 'pesquisa/:busca', component: PesquisaComponent}
 ];
 
 @NgModule({

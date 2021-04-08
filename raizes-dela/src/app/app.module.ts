@@ -21,6 +21,7 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
     UserEditComponent,
     ProdutoEditComponent,
     ProdutoDeleteComponent,
-    MeusProdutosComponent
+    MeusProdutosComponent,
+    PesquisaComponent
   ],
   imports: [
     BrowserModule,

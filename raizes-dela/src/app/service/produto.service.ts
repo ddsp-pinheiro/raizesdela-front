@@ -20,11 +20,11 @@ export class ProdutoService {
   }
 
   getByIdProduto(id:number): Observable <Produto>{
-    return this.http.get<Produto>(`http://localhost:8080/produto/${id}`,this.token)
+    return this.http.get<Produto>(`http://localhost:8080/produto/${id}`)
   }
 
-  getByNameProduto(nome:string): Observable <Produto>{
-    return this.http.get<Produto>(`http://localhost:8080/produto/nome/${nome}`)
+  getByNameProduto(nome:string): Observable <Produto[]>{
+    return this.http.get<Produto[]>(`http://localhost:8080/produto/nome/${nome}`)
   }
 
   postProduto(produto:Produto):Observable<Produto>{

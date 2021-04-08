@@ -17,6 +17,7 @@ export class MenuComponent implements OnInit {
   token = environment.token
   id = environment.id
   tipoUsuario = environment.tipoVendedor
+  busca: string
 
   constructor(
     private http: HttpClient,
@@ -25,7 +26,12 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
+  }
+
+  refresh(){
+      this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() =>{
+           this.router.navigate(["/pesquisa",this.busca])
+      })
   }
 
   sair() {

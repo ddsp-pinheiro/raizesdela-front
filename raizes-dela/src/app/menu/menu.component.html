@@ -34,9 +34,9 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <div id="divBusca">
-                <input type="search" id="txtBusca" placeholder="Pesquisar..." />
-                <button class="btn" type="submit" id="cor"><i id="cor" class="fa fa-search"
-                        aria-hidden="true"></i></button>
+                <input [(ngModel)]="busca" name="busca" type="search" id="txtBusca" placeholder="O que você procura?" />
+                <button class="btn" type="submit" id="cor" (click)="refresh()"><i id="cor" class="fa fa-search"
+                        aria-hidden="true" ></i></button>
             </div>
         </form>
         <!-- Exemplo de único botão danger -->
