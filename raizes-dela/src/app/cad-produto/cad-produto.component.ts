@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { Usuario } from '../model/Usuario';
 import { environment } from 'src/environments/environment.prod';
 import { ProdutoService } from '../service/produto.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cad-produto',
@@ -38,7 +39,8 @@ export class CadProdutoComponent implements OnInit {
     window.scroll(0,0)
 
     if (environment.token == "") {
-      alert("Sua sessão expirou")
+      Swal.fire('Sua sessão expirou')
+
       this.router.navigate(["/home"])
     }
 
@@ -65,11 +67,19 @@ export class CadProdutoComponent implements OnInit {
     this.produto.usuario = this.usuario
 
     if(this.produto == null) {
-      alert("Preencha os campos corretamento")
+      Swal.fire({
+        icon: 'warning',
+        title: 'Oops...',
+        text: 'Preencha os campos corretamente!'
+      })
     } else {
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=> {
         this.produto = resp
-          alert ('Produto cadastrado com sucesso!')
+          Swal.fire({
+            icon: 'success',
+            title: 'Boa!',
+            text: 'Produto cadastrado com sucesso!'
+          })
           this.produto = new Produto
           this.router.navigate(['/meus-produtos'])
       })

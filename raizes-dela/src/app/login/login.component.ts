@@ -3,6 +3,7 @@ import { UsuarioLogin } from './../model/UsuarioLogin';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../service/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -32,7 +33,12 @@ export class LoginComponent implements OnInit {
       this.router.navigate (['/home'])
     },error=>{
       if( error.status == 500 ){
-        alert('Usuário ou senha incorretos')
+        Swal.fire({
+          icon: 'warning',
+          title: 'Oops...',
+          text: 'Usuário ou senha incorretos!'
+        })
+
     }}
     )
   }

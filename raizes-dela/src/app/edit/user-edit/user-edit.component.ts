@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/model/Usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-user-edit',
@@ -53,15 +54,24 @@ export class UserEditComponent implements OnInit {
     } else {
       this.user.tipoVendedor = this.tipoUsuario
     }
-    
+
     console.log(this.user)
     if(this.user.senha != this.confirmarSenha){
-      alert('As senhas estão incorretas.')
+      Swal.fire({
+        icon: 'warning',
+        title: 'Oops...',
+        text: 'As senhas estão incorretas'
+      })
+
     } else {
       this.authService.cadastrar(this.user).subscribe((resp: Usuario) => {
         this.user = resp
         this.router.navigate(['/home'])
-        alert('Usuário atualizado com sucesso, faça o login novamente')
+        Swal.fire({
+          icon: 'success',
+          title: 'Boa!',
+          text: 'Usuário atualizado com sucesso, faça o login novamente'
+        })
         environment.token = ''
         environment.nome = ''
         environment.id = 0
@@ -70,6 +80,6 @@ export class UserEditComponent implements OnInit {
     }
   }
 
-  
+
 
 }

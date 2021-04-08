@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from './../model/Produto';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-produto',
@@ -50,7 +52,12 @@ export class ProdutoComponent implements OnInit {
 
   addCarrinho() {
     if (environment.token == "") {
-      alert("É preciso estar logado para comprar")
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'É preciso estar logado para comprar'
+      })
+
       this.router.navigate(["/login"])
     } else {
       this.parcial()
@@ -70,8 +77,11 @@ export class ProdutoComponent implements OnInit {
           valorParcial: this.vParcial
         })
       localStorage.setItem('carrinho', JSON.stringify(this.carrinho))
-
-      alert("Produto adicionado com sucesso!")
+      Swal.fire({
+        icon: 'success',
+        title: 'Boa!',
+        text: 'Produto adicionado com sucesso!'
+      })
 
       this.router.navigate(['/carrinho'])
     }

@@ -7,6 +7,7 @@ import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutoService } from 'src/app/service/produto.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-produto-edit',
@@ -77,11 +78,21 @@ export class ProdutoEditComponent implements OnInit {
     this.produto.usuario = this.usuario
 
     if(this.produto == null) {
-      alert("Preencha os campos corretamente")
+      Swal.fire({
+        icon: 'warning',
+        title: 'Oops...',
+        text: 'Preencha os campos corretamente'
+      })
+
     }else {
       this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=> {
         this.produto = resp
-          alert ('Produto editado com sucesso!')
+          Swal.fire({
+            icon: 'success',
+            title: 'Boa!',
+            text: 'Produto editado com sucesso!'
+          })
+
           this.router.navigate(["/meus-produtos"])
       })
     }
