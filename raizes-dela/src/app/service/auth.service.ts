@@ -56,7 +56,7 @@ export class AuthService {
       nome: environment.nome,
       id: environment.id,
       tipoVendedor: environment.tipoVendedor
-    
+
     }
     return user
   }
@@ -68,29 +68,8 @@ export class AuthService {
     if (environment.token != '') {
       ok = false
     }
-    
+
     return ok
   }
 
-  // cadProduto(produto: Produto): Observable<Produto>{
-  //   return this.http.post<Produto>('http://localhost:8080/usuario/produto', produto)
-  //}
-
- /* vendedora(){
-    let ok = false
-
-    if(environment.tipoVendedor == true){
-      ok = true
-    }
-
-    return ok
-  }*/
-  /* logado(){
-    let logado = false
-
-    if(environment.token != ''){
-      logado = true
-    }
-
-    return logado*/
 }

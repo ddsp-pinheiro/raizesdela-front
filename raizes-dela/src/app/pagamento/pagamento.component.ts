@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-pagamento',
   templateUrl: './pagamento.component.html',
@@ -33,22 +35,42 @@ export class PagamentoComponent implements OnInit {
    validaBoleto(){
       if(this.endereco != null && this.cidade != null && this.cep != null){
         this.router.navigate(['/home'])
-        alert("Boleto gerado com sucesso! Aguarde email de confirmação da compra.")
+        Swal.fire({
+          icon: 'success',
+          title: 'Boa!',
+          text: 'Boleto gerado com sucesso! Aguarde o email de confirmação da compra.'
+        })
         window.open("https://drive.google.com/file/d/1Jj76x1dCv4n4cTyD0Idtzpleea2VvFjh/view")
         localStorage.clear()
 
       } else{
-        alert("Preencha corretamente o formulário")
+        Swal.fire({
+          icon: 'warning',
+          title: 'Atenção',
+          text: 'Preencha o formulário corretamente!'
+        })
       }
   }
 
   validaCartao(){
     if(this.endereco == null || this.cidade == null || this.cep == null){
-        alert("Preencha corretamente o endereço")
+        Swal.fire({
+          icon: 'warning',
+          title: 'Atenção',
+          text: 'Preencha o endereço corretamente.'
+        })
       } else if(this.nomeCartao == null || this.cpf == null || this.noCartao == null || this.cvv == null) {
-        alert("Preencha corretamente os dados do cartão")
+        Swal.fire({
+          icon: 'warning',
+          title: 'Atenção',
+          text: 'Preencha corretamente os dados do cartão.'
+        })
       } else{
-        alert("Pagamento realizado com sucesso! Aguarde email de confirmação da compra.")
+        Swal.fire({
+          icon: 'success',
+          title: 'Boa!',
+          text: 'Pagamento realizado com sucesso! Aguarde o email de confirmação da compra.'
+        })
         this.router.navigate (['/home'])
         localStorage.clear()
       }

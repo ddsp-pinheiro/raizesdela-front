@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from 'src/app/model/Produto';
 import { ProdutoService } from 'src/app/service/produto.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-produto-delete',
@@ -40,7 +41,11 @@ export class ProdutoDeleteComponent implements OnInit {
 
   apagar() {
     this.produtoService.deleteProduto(this.idPost).subscribe(()=>{
-      alert("Produto apagado com sucesso!");
+      Swal.fire({
+        icon: 'success',
+        text: 'Produto apagado com sucesso!'
+      })
+
       this.router.navigate(["/meus-produtos"]);
     });
   }

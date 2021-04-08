@@ -7,6 +7,7 @@ import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-meus-produtos',
@@ -26,10 +27,17 @@ export class MeusProdutosComponent implements OnInit {
   ngOnInit() {
     window.scroll(0,0);
     if (environment.token == "") {
-      alert("Sua sessão expirou");
+
+      Swal.fire({
+        icon: 'info',
+        title: 'Oops...',
+        text: 'Sua sessão expirou!'
+      })
+
+
       this.router.navigate(["/home"]);
     }
-    
+
     this.findByIdUser();
   }
 
