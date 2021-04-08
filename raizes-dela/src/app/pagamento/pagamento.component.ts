@@ -50,7 +50,6 @@ export class PagamentoComponent implements OnInit {
       } else{
         alert("Pagamento realizado com sucesso! Aguarde email de confirmação da compra.")
         this.router.navigate (['/home'])
-        localStorage.clear()
       }
   }
 
