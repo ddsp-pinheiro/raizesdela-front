@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Titulo;
+  src: url('/src/assets/fontes/Geomanist-Regular-Italic/Geomanist-Regular.otf');
+}
+
+h1{
+  font-family: Titulo;
+  font-weight: bold;
+}
+h2{
+  font-family: Titulo;
+  font-weight: bold;
+}
+h3{
+  font-family: Titulo;
+}
+h4{
+  font-family: Titulo;
+}
+h5{
+  font-family: Titulo;
+}
+h6{
+  font-family: Titulo;
+}
+p{
+  font-family: Texto;
+}
+label{
+  font-family: Texto;
+}
+option{
+  font-family: Texto;
+}
+div{
+  font-family: Texto;
+}
+small{
+  font-family: Texto;
+}
+

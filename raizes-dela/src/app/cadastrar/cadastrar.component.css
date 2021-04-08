@@ -1,3 +1,21 @@
+@font-face {
+  font-family: Titulo;
+  src: url('../../assets/fontes/Geomanist-Regular-Italic/Geomanist-Regular.otf');
+}
+@font-face {
+  font-family: Texto;
+  src: url('../../assets/fontes/Ubuntu/Ubuntu-Light.ttf');
+}
+h1{
+  font-family: Titulo;
+  font-weight: bold;
+}
+label{
+  font-family: Texto;
+}
+button{
+  font-family: Texto;
+}
 .fundo{
   background-color: #1c372c;
   height: 1vh;
