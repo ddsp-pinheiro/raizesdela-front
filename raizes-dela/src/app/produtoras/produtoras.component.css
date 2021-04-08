@@ -1,22 +1,4 @@
-@font-face {
-  font-family: UbuntuBold;
-  src: url(../../assets/fontes/Ubuntu-Bold.ttf);
-}
-h1{
-  font-family: UbuntuBold;
-}
 
-@font-face {
-  font-family: Ubuntu;
-  src: url(../../assets/fontes/Ubuntu-Light.ttf);
-}
-small{
-  font-family: Ubuntu;
-}
-
-p{
-  font-family: Ubuntu;
-}
 
 section{
 

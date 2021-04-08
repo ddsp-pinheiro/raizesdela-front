@@ -1,13 +1,8 @@
-@font-face {
-  font-family: bastian;
-  src: url(/assets/fontes/bastian_sidney/Bastian\ Sidney.ttf);
-}
 
 h2{
   text-align: center;
   color: #1c372c;
   margin-bottom: 20px;
-  font-family: bastian;
   font-size: 70pt;
 }
 
@@ -67,7 +62,6 @@ p{
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-family: bastian;
   font-size: 70pt;
 }
 

@@ -1,3 +1,14 @@
+@font-face {
+  font-family: Titulo;
+  src: url('../../assets/fontes/Geomanist-Regular-Italic/Geomanist-Regular.otf');
+}
+h4{
+  font-family: Titulo;
+}
+a{
+  font-family: Titulo;
+}
+
 * {
   padding: 0px;
   font-family: 'Poppins', sans-serif;
@@ -13,7 +24,6 @@
   margin-top: 40px;
   margin-bottom: 50px;
   color: white;
-  font-family: 'Poppins', sans-serif;
 }
 
 .first h4 {
@@ -51,7 +61,6 @@
 .second {
   margin-top: 40px;
   margin-bottom: 50px;
-  font-family: 'Poppins', sans-serif;
   text-align: center;
 }
 
@@ -59,7 +68,6 @@
   margin-top: 20px;
   margin-bottom: 20px;
   color: white;
-  font-family: 'Poppins', sans-serif;
   text-align: center;
 }
 
@@ -100,7 +108,6 @@
   margin-top: 40px;
   margin-bottom: 50px;
   color:white;
-  font-family: 'Poppins', sans-serif;
   text-align: right;
 }
 
