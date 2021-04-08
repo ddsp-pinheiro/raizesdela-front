@@ -72,6 +72,7 @@ export class PagamentoComponent implements OnInit {
           text: 'Pagamento realizado com sucesso! Aguarde o email de confirmação da compra.'
         })
         this.router.navigate (['/home'])
+        localStorage.clear()
       }
   }
 
