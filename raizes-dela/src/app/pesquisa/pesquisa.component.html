@@ -1,36 +1,26 @@
-<div class="container mt-5 mb-5">
+<div class="container mt-3 mb-5">
 
   <div class="row mb-5">
-		<div class="col-md-12">
-			<h1 class="text-center titulo">Pesquisa por </h1>
+    <div class="col-md-12">
+      <h1 class="text-center titulo">Pesquisa por </h1>
       <h2 class="text-center busca">"{{busca}}"</h2>
-		</div>
-	</div>
+    </div>
+  </div>
 
-	<div class="row">
-		<div class="col-md-12">
-
-        <!--div envolvendo todos os cards-->
-        <div class="card-columns">
-          <!--cada card com o produto-->
-          <div class="card" *ngFor='let item of listaProd'>
-
-            <img class="img-fluid" alt="Imagem do produto" src="{{item.imagem}}">
-
-            <div class="card-body"></div>
-
-            <div class="card-footer">
-              <h4 class="card-title">{{item.nome}}</h4>
-              <small class="text-muted">Categoria: {{item.categoria.nome}}</small>
-              <p class="card-text">{{item.descricao}}</p>
-              <p>R$ {{item.valor}}</p>
-              <p>Estoque: {{item.estoque}} unidades</p>
-            </div>
-
-          </div>
+  <div class="tab-pane" role="tabpanel">
+    <div class="card-columns">
+      <div class="card" *ngFor="let item of listaProd">
+        <div class="d-flex justify-content-center">
+          <img class="img-fluid" src="{{item.imagem}}">
         </div>
+        <div class="card-body text-center">
+          <h4 class="nome">{{item.nome}}</h4>
+          <small class="text-muted">{{item.categoria.nome}}</small>
+          <p id="preco">R$ {{item.valor.toFixed(2)}}</p>
+            <a href="#" class="btn btn-verde w-100" [routerLink]="['/produto',item.id]">Ver Produto</a>
+        </div>
+      </div>
 
     </div>
   </div>
 </div>
-

@@ -35,7 +35,7 @@ export class PagamentoComponent implements OnInit {
         this.router.navigate(['/home'])
         alert("Boleto gerado com sucesso! Aguarde email de confirmação da compra.")
         window.open("https://drive.google.com/file/d/1Jj76x1dCv4n4cTyD0Idtzpleea2VvFjh/view")
-
+        localStorage.clear()
 
       } else{
         alert("Preencha corretamente o formulário")
@@ -50,12 +50,8 @@ export class PagamentoComponent implements OnInit {
       } else{
         alert("Pagamento realizado com sucesso! Aguarde email de confirmação da compra.")
         this.router.navigate (['/home'])
+        localStorage.clear()
       }
-  }
-
-  sucesso(){
-    alert("Pagamento realizado com sucesso! Aguarde email de confirmação da compra.")
-    this.router.navigate (['/home'])
   }
 
   mascaraCEP(){

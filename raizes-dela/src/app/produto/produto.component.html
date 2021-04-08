@@ -1,13 +1,17 @@
-<body>
+<div class="container mt-3 mb-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-12">
+      <h1 class="text-center titulo">{{produto.categoria.nome}}</h1>
+    </div>
+  </div>
+
   <div id="grup">
     <img src={{produto.imagem}}>
     <!-- <img src="https://img.freepik.com/fotos-gratis/mandioca-organica-mandioca-mandioca-aipim-culinaria-brasileira-na-mesa-de-madeira-rustica_59529-637.jpg?size=626&ext=jpg" alt=""> -->
     <div class="col-5" id="txt-grup">
       <h2>{{produto.nome}}</h2>
-      <h5>Categoria {{produto.categoria.nome}}</h5>
       <!-- <h2>MANDIOCAAAAAAA</h2> -->
       <h1>R${{produto.valor.toFixed(2)}}</h1>
-
       <!-- <h1>R$ 300,00</h1> -->
 
       <!--Nova div quantidade-->
@@ -27,7 +31,7 @@
       </div>
       <!--Fim nova div-->
 
-      <button type="button" class="btn w-100" (click)="addCarrinho()">Adicionar ao carrinho</button>
+      <button type="button" class="btn" (click)="addCarrinho()">Adicionar ao carrinho</button>
       <div id="descricao">
         <p><strong>DESCRIÇÃO: </strong>{{produto.descricao}}</p>
         <!-- Lorem dolor sit amet consectetur adipisicing elit. Repellendus ut vero eveniet soluta nam
@@ -36,4 +40,4 @@
       </div>
     </div>
   </div>
-</body>
+</div>

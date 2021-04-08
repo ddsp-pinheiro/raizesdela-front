@@ -1,10 +1,19 @@
-body{
-    display: flex;
+@font-face {
+  font-family: bastian;
+  src: url(/assets/fontes/bastian_sidney/Bastian\ Sidney.ttf);
 }
+
 #grup{
-    margin: 15vh;
     display: flex;
     align-items: center;
+}
+
+.titulo{
+  text-align: center;
+  color: #1c372c;
+  font-family: bastian;
+  font-size: 70pt;
+  margin-bottom: 10px;
 }
 
 #txt-grup{
@@ -24,12 +33,14 @@ button{
 .btn{
     color: white;
     background-color: #1c372c;
+    width: 90%;
 }
 #descricao{
     display: flex;
-    padding: 30px;
-    border-radius: 30px;
-    background-color: #df7905cc;
+    width: 90%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color:#884f0e79;
 }
 
 h2{
@@ -43,9 +54,7 @@ h2{
 h5{
   color:  #1c372c;
 }
- img{
-   max-width: 700px;
- }
+
  #quantidade{
   display: flex;
   justify-content: center;
@@ -89,4 +98,9 @@ h5{
 #quantrow{
   align-items: baseline;
   margin-top: 20px;
+}
+
+img{
+  max-width: 700px;
+  max-height: 500px;
 }

@@ -22,7 +22,7 @@ export class ProdutoComponent implements OnInit {
     let id = this.aRoute.snapshot.params['id']
     this.findProdById(id)
     this.quant = 1
-    this.parcial()
+    this.vParcial = this.produto.valor
   }
 
 
@@ -53,6 +53,7 @@ export class ProdutoComponent implements OnInit {
       alert("É preciso estar logado para comprar")
       this.router.navigate(["/login"])
     } else {
+      this.parcial()
       this.carrinho = JSON.parse(localStorage.getItem('carrinho') || '[]')
 
       this.carrinho.push(

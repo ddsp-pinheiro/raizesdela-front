@@ -15,14 +15,14 @@
           <div class="card" *ngFor='let produto of user.produto'>
 
             <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
-            
+
             <div class="card-body"></div>
-            
+
             <div class="card-footer">
               <h4 class="card-title">{{produto.nome}}</h4>
               <small class="text-muted">Categoria: {{produto.categoria.nome}}</small>
               <p class="card-text">{{produto.descricao}}</p>
-              <p>R$ {{produto.valor}}</p>
+              <p>R$ {{produto.valor.toFixed(2)}}</p>
               <p>Estoque: {{produto.estoque}} unidades</p>
 
               <a [routerLink]="['/produto-delete', produto.id]" id="btn-1" class="btn mr-1">Apagar</a>

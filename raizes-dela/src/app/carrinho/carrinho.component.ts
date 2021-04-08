@@ -25,21 +25,12 @@ export class CarrinhoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.total()
     this.exibirCarrinho()
+    this.total()
   }
 
-  // process(value: number) {
-  //   value += this.quant;
-  //   if (value < 1) {
-  //     this.quant = 1;
-  //   } else {
-  //     this.quant = value;
-  //   }
-  // }
-
   exibirCarrinho() {
-    let localS = localStorage['carrinho']
+    const localS = localStorage['carrinho']
     if (localS.length > 0) {
       this.carrinho = localS ? JSON.parse(localS) : []
     } else {
@@ -65,16 +56,6 @@ export class CarrinhoComponent implements OnInit {
   //       user: i.user,
   //       senha: i.senha
   //     }
-  // })
-
-
-  // let dadosProd = []
-  // dadosProd = JSON.parse(localStorage.getItem('carrinho'))
-
-  // dadosProd.forEach((i) => {
-  //   carrinhoOb = {
-  //     valor: i.valorParcial
-  //   }
   // })
 
 
