@@ -4,6 +4,7 @@ import { Categoria } from 'src/app/model/Categoria';
 import { Usuario } from 'src/app/model/Usuario';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-categoria-edit',
@@ -26,6 +27,14 @@ export class CategoriaEditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
+
+    if (environment.token == "") {
+      Swal.fire('Sua sessão expirou')
+
+      this.router.navigate(["/home"])
+    }
+
     this.findAllCategorias()
 
     let id = this.route.snapshot.params["id"]
@@ -47,7 +56,11 @@ export class CategoriaEditComponent implements OnInit {
   cadastrar(){
     this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
       this.categoria = resp
-      alert('Categoria cadastrado com sucesso!')
+      Swal.fire({
+        icon: 'success',
+        title: 'Feito!',
+        text: 'Categoria cadastrada com sucesso!'
+      })
       this.findAllCategorias()
       this.categoria = new Categoria()
     })
@@ -56,7 +69,11 @@ export class CategoriaEditComponent implements OnInit {
   atualizar(){
     this.categoriaService.putCategoria(this.categoria).subscribe((resp: Categoria) => {
       this.categoria = resp
-      alert('Categoria atualizado com sucesso!')
+      Swal.fire({
+        icon: 'success',
+        title: 'Feito!',
+        text: 'Categoria atualizada com sucesso!'
+      })
       this.findAllCategorias()
       
     })
@@ -64,7 +81,12 @@ export class CategoriaEditComponent implements OnInit {
 
   apagar(idCategoria: number){
     this.categoriaService.deleteCategoria(idCategoria).subscribe(()=>{
-      alert('Categoria apagado com sucesso!')
+      Swal.fire({
+        icon: 'success',
+        title: 'Feito!',
+        text: 'Categoria apagada com sucesso!'
+      })
+      
       this.findAllCategorias()
       
       
