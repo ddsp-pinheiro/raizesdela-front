@@ -1,3 +1,34 @@
+
+.centro{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imagem{
+  width: 75%;
+}
+
+
+#nossaEquipe {
+  margin-left: 42.5%;
+}
+#equipe {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: center;
+}
+#cont-2 {
+  display: flex;
+  justify-content: center;
+}
+
+#redondo{
+  border-radius: 50%;
+}
+
+
 #verde {
   align-items: center;
   height: 75vh;
@@ -25,38 +56,22 @@ h1 {
   height: 60vh;
 }
 /*-------------------------------------*/
-#sobre {
-  display: flex;
-  justify-content: space-around;
-  margin: 15vh;
-}
+
 h2 {
   margin-top: 2.5vh;
 }
 .col-3 img {
   width: 240px;
 }
-#redondo{
-  border-radius: 50%;
-}
+
 /*--------------------------------------*/
 .card-img{
   height: 50px;
   width: 50px;
 }
-#ee {
-  margin-left: 42.5%;
-}
-#equipe {
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  display: flex;
-  justify-content: center;
-}
-#cont-2 {
-  display: flex;
-  justify-content: center;
-}
+
+
+
 h5 {
   font-size: 11pt;
 }
@@ -94,8 +109,7 @@ a:hover{
   height: 75vh;
   display: flex;
 }
-#co {
-}
+
 #ou {
   font-size: 30pt;
   color: rgb(29, 29, 29);
