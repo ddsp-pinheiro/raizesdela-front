@@ -22,6 +22,7 @@ import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { PesquisaComponent } from './pesquisa/pesquisa.component';
     ProdutoEditComponent,
     ProdutoDeleteComponent,
     MeusProdutosComponent,
-    PesquisaComponent
+    PesquisaComponent,
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,

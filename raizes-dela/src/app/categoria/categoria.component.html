@@ -1,0 +1,36 @@
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+		<div class="col-md-12">
+			<h2 class="text-center">{{categoria.nome}}</h2>
+		</div>
+	</div>
+    
+    <div class="row bg">
+		<div class="col-md-12">
+
+        <!--div envolvendo todos os cards-->
+        <div class="card-columns">
+          <!--cada card com o produto-->
+          <div class="card " *ngFor='let produto of categoria.produto'>
+
+            <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
+            
+            <div class="card-body"></div>
+            
+            <div class="card-footer">
+              <h4 class="card-title">{{produto.nome}}</h4>
+              <p class="card-text">{{produto.descricao}}</p>
+              <p>R$ {{produto.valor}}</p>
+              <a href="#" class="btn btn-verde w-100">Comprar</a>
+                                          
+            </div>
+
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+
+</div>
