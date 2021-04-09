@@ -1,0 +1,66 @@
+@font-face {
+    font-family: bastian;
+    src: url(/assets/fontes/bastian_sidney/Bastian\ Sidney.ttf);
+}
+
+.bg{
+    background-color: #1c372c;
+    color: white;
+}
+
+#formCat{
+    display: flex;
+    justify-content: center;
+    margin-top: 4;
+    margin-bottom: 20px;
+}
+
+#titulo{
+    margin-top: 20px;
+    text-align: center;
+    font-family: bastian;
+    font-size: 70pt;
+}
+
+#cadastrar{
+    color: white;
+    background-color: #884f0e;
+    
+}
+
+#editar{
+    border-color: #1c372c;
+    color: #1c372c;
+    
+}
+
+#editar:hover{
+    border-color: #1c372c;
+    color: white;
+    background-color: #1c372c;
+}
+
+#apagar{
+    border-color: #884f0e;
+    color: #884f0e;
+}
+
+#apagar:hover{
+    border-color: #884f0e;
+    color: white;
+    background-color: #884f0e;
+}
+
+#cancelar{
+    border-color: #884f0e;
+    color: white;
+    background-color: #884f0e;
+    margin-right: 4pt;
+}
+
+#excluir{
+    border-color: #884f0e;
+    color: white;
+    background-color: #1c372c;
+}
+
