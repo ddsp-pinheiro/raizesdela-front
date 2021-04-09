@@ -12,17 +12,10 @@
                     Categorias
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Legumes</a>
-                    <a class="dropdown-item" href="#">Verduras</a>
-                    <a class="dropdown-item" href="#">Frutas</a>
-                    <a class="dropdown-item" href="#">Artesanatos</a>
-                    <a class="dropdown-item" href="#">Doces</a>
-                    <a class="dropdown-item" href="#">Laticínios</a>
-                    <a class="dropdown-item" href="#">Veganos</a>
-                    <a class="dropdown-item" href="#">Reciclados</a>
-                    <a class="dropdown-item" href="#">Outros</a>
+                    <a *ngFor='let item of listaCategoria' class="dropdown-item" (click)="refresh2(item.id)" value="">{{item.nome}}</a>
+                    
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Todos os produtos</a>
+                    <a class="dropdown-item" routerLink='/categoria/10'>Todos os produtos</a>
                 </div>
             </li>
             <li class="nav-item">

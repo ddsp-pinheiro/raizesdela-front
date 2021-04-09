@@ -14,6 +14,7 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -30,7 +31,8 @@ const routes: Routes = [
   {path: 'produto-edit/:id', component: ProdutoEditComponent},
   {path: 'produto-delete/:id', component: ProdutoDeleteComponent},
   {path: 'meus-produtos', component: MeusProdutosComponent},
-  {path: 'pesquisa/:busca', component: PesquisaComponent}
+  {path: 'pesquisa/:busca', component: PesquisaComponent},
+  {path: 'categoria/:id', component: CategoriaComponent}
 ];
 
 @NgModule({
