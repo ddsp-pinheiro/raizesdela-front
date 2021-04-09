@@ -17,5 +17,16 @@ h2 {
   color: #1c372c;
   margin-bottom: 10px;
   font-family: bastian;
-  font-size: 80pt;
+  font-size: 100pt;
 }
+
+h1{
+  color: #884f0e;
+  font-size: 30px;
+  text-align: center;
+ }
+
+ h4{
+  font-size: 40px;
+  text-align: center;
+ }
