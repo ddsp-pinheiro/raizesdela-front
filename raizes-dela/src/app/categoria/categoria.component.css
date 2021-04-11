@@ -2,16 +2,13 @@
   font-family: bastian;
   src: url(/assets/fontes/bastian_sidney/Bastian\ Sidney.ttf);
 }
-
 .btn-verde {
   color: white;
   background-color: #1c372c;
 }
-
 .btn-verde:hover {
   background-color: #346350;
 }
-
 h1 {
   text-align: center;
   color: #1c372c;
@@ -19,14 +16,16 @@ h1 {
   font-family: bastian;
   font-size: 100pt;
 }
-
 h2 {
   font-size: 40px;
   text-align: center;
 }
-
 h3 {
   color: #884f0e;
   font-size: 30px;
   text-align: center;
+}
+.card-footer {
+  background-color: white;
+  border-top: none;
 }
