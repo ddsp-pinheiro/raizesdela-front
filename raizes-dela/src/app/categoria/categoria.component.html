@@ -19,8 +19,8 @@
             <div class="card-body"></div>
             
             <div class="card-footer">
-              <h4 class="card-title">{{produto.nome}}</h4>
-              <h1>R$ {{produto.valor.toFixed(2)}}</h1>
+              <h2 class="card-title">{{produto.nome}}</h2>
+              <h3>R$ {{produto.valor.toFixed(2)}}</h3>
               <a href="#" class="btn btn-verde w-100" [routerLink]="['/produto', produto.id]">Comprar</a>
                                           
             </div>
