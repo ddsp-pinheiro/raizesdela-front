@@ -8,6 +8,7 @@ import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-menu',
@@ -69,10 +70,14 @@ export class MenuComponent implements OnInit {
   }
 
   sair() {
-    this.router.navigate(["/home"])
     environment.token = ''
     environment.nome = ''
     environment.id = 0
+    environment.imagem = '',
+    environment.tipoVendedor = false,
+    environment.tipoAdministrador = false
+    this.router.navigate(["/home"])
+    Swal.fire('Sessão finalizada')
   }
 
 }
