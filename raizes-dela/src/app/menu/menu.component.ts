@@ -27,6 +27,7 @@ export class MenuComponent implements OnInit {
   token = environment.token
   id = environment.id
   tipoUsuario = environment.tipoVendedor
+  tipoAdministrador = environment.tipoAdministrador
   busca: string
 
   constructor(

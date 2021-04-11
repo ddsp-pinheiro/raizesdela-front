@@ -5,4 +5,5 @@ export class UsuarioLogin{
     public senha: string
     public token: string
     public tipoVendedor: boolean
+    public tipoAdministrador: boolean
 }

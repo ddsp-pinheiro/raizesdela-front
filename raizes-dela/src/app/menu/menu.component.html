@@ -7,13 +7,15 @@
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     Categorias
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a *ngFor='let item of listaCategoria' class="dropdown-item" (click)="refresh2(item.id)" value="">{{item.nome}}</a>
                     
+                    <div *ngIf="authService.logado() && authService.dadosUser().tipoAdministrador==true" class="dropdown-divider"></div>
+                    <a *ngIf="authService.logado() && authService.dadosUser().tipoAdministrador==true" class="dropdown-item" routerLink='/categoria-edit'>Administrar categorias</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" routerLink='/categoria/10'>Todos os produtos</a>
                 </div>
@@ -41,7 +43,6 @@
             <div class="dropdown-menu">
                 <a class="dropdown-item" routerLink='/cad-produto'>Cadastrar produto</a>
                 <a class="dropdown-item" routerLink='/meus-produtos'>Meus produtos</a>
-                <a class="dropdown-item" routerLink='/categoria-edit'>Cadastro de categorias</a>
             </div>
         </div>
         <a *ngIf="authService.deslogado()" id="login" routerLink='/login'><i class="fa fa-user-circle"
