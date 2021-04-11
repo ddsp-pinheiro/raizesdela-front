@@ -25,6 +25,9 @@ h3 {
   font-size: 30px;
   text-align: center;
 }
+.card {
+  cursor: pointer;
+}
 .card-footer {
   background-color: white;
   border-top: none;

@@ -5,6 +5,9 @@
 .btn-verde:hover {
   background-color: #346350;
 }
+.card {
+  cursor: pointer;
+}
 .card-footer {
   background-color: white;
   border-top: none;

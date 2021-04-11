@@ -7,17 +7,20 @@
     </div>
   </div>
 
-  <div class="tab-pane" role="tabpanel">
-    <div class="card-columns">
-      <div class="card" *ngFor="let item of listaProd">
+  <div class="row">
+    <!--div envolvendo todos os cards-->
+    <div class="col-sm-4 mb-3" *ngFor='let produto of listaProd'>
+
+      <!--cada card com o produto-->
+      <div class="card" [routerLink]="['/produto', produto.id]">
         <div class="d-flex justify-content-center">
-          <img class="img-fluid" src="{{item.imagem}}">
+          <img class="img-fluid" src="{{produto.imagem}}">
         </div>
         <div class="card-body text-center">
-          <h4 class="nome">{{item.nome}}</h4>
-          <small class="text-muted">{{item.categoria.nome}}</small>
-          <p id="preco">R$ {{item.valor.toFixed(2)}}</p>
-            <a class="btn btn-verde w-100" [routerLink]="['/produto',item.id]">Adicionar ao carrinho</a>
+          <h4 class="nome">{{produto.nome}}</h4>
+          <small class="text-muted">{{produto.categoria.nome}}</small>
+          <p id="preco">R$ {{produto.valor.toFixed(2)}}</p>
+            <a class="btn btn-verde w-100" [routerLink]="['/produto',produto.id]">Adicionar ao carrinho</a>
         </div>
       </div>
 

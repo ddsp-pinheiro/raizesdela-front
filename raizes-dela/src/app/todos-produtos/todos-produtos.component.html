@@ -11,7 +11,7 @@
       <div class="col-sm-4 mb-3" *ngFor='let produto of listaProdutos'>
   
         <!--cada card com o produto-->
-        <div class="card">
+        <div class="card" [routerLink]="['/produto', produto.id]">
           <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
   
           <div class="card-body">

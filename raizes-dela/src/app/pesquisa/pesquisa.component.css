@@ -2,7 +2,6 @@
   font-family: bastian;
   src: url(/assets/fontes/bastian_sidney/Bastian\ Sidney.ttf);
 }
-
 .titulo{
   text-align: center;
   color: #1c372c;
@@ -10,24 +9,22 @@
   font-size: 70pt;
   margin-bottom: 0;
 }
-
 .btn-verde {
   color: white;
   background-color: #1c372c;
 }
-
 .btn-verde:hover {
   background-color: #346350;
 }
-
 img{
   max-height: 300px;
   max-width: 300px;
   margin:0;
 }
-
 #preco{
   color: #884f0e;
   font-size: 40px;
 }
-
+.card {
+  cursor: pointer;
+}
