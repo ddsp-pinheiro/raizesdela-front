@@ -1,0 +1,22 @@
+.btn-verde {
+  color: white;
+  background-color: #1c372c;
+}
+.btn-verde:hover {
+  background-color: #346350;
+}
+.card-footer {
+  background-color: white;
+  border-top: none;
+}
+@font-face {
+  font-family: bastian;
+  src: url(/assets/fontes/bastian_sidney/Bastian\ Sidney.ttf);
+}
+h1 {
+  text-align: center;
+  color: #1c372c;
+  margin-bottom: 10px;
+  font-family: bastian;
+  font-size: 100pt;
+}

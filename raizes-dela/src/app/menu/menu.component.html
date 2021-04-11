@@ -17,7 +17,7 @@
                     <div *ngIf="authService.logado() && authService.dadosUser().tipoAdministrador==true" class="dropdown-divider"></div>
                     <a *ngIf="authService.logado() && authService.dadosUser().tipoAdministrador==true" class="dropdown-item" routerLink='/categoria-edit'>Administrar categorias</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" routerLink='/categoria/10'>Todos os produtos</a>
+                    <a class="dropdown-item" routerLink='/todos-produtos'>Todos os produtos</a>
                 </div>
             </li>
             <li class="nav-item">
