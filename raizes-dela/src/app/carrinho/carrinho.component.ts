@@ -27,7 +27,7 @@ export class CarrinhoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    window.scroll(0,0)
     if (environment.token == "") {
       Swal.fire({
         icon: 'error',
