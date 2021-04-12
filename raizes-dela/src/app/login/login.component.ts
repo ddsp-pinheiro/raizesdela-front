@@ -31,7 +31,13 @@ export class LoginComponent implements OnInit {
       environment.token = this.userLogin.token
       environment.tipoVendedor = this.userLogin.tipoVendedor
 
-      this.router.navigate (['/home'])
+      if(this.userLogin.tipoVendedor == false){
+        this.router.navigate (['/home'])
+      } else {
+        this.router.navigate (['meus-produtos'])
+      }
+      
+
     },error=>{
       if( error.status == 500 ){
         Swal.fire({

@@ -20,6 +20,8 @@ export class CategoriaEditComponent implements OnInit {
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
 
+  busca: string
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -64,6 +66,10 @@ export class CategoriaEditComponent implements OnInit {
       this.findAllCategorias()
       this.categoria = new Categoria()
     })
+
+    this.router.navigateByUrl('/user-edit', { skipLocationChange: true }).then(() =>{
+      this.router.navigate(["/categoria-edit"])
+ })
   }
 
   atualizar(){
@@ -75,8 +81,11 @@ export class CategoriaEditComponent implements OnInit {
         text: 'Categoria atualizada com sucesso!'
       })
       this.findAllCategorias()
-      
     })
+
+    this.router.navigateByUrl('/user-edit', { skipLocationChange: true }).then(() =>{
+      this.router.navigate(["/categoria-edit"])
+ })
   }
 
   apagar(idCategoria: number){
@@ -88,9 +97,13 @@ export class CategoriaEditComponent implements OnInit {
       })
       
       this.findAllCategorias()
-      
-      
     })
+
+    this.router.navigateByUrl('/user-edit', { skipLocationChange: true }).then(() =>{
+    this.router.navigate(["/categoria-edit"])
+ })
   }
+
+
 
 }

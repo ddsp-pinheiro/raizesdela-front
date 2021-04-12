@@ -8,6 +8,7 @@ import { Usuario } from '../model/Usuario';
 import { environment } from 'src/environments/environment.prod';
 import { ProdutoService } from '../service/produto.service';
 import Swal from 'sweetalert2';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-cad-produto',
@@ -32,6 +33,7 @@ export class CadProdutoComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     private categoriaService: CategoriaService,
+    private http: HttpClient,
     private produtoService: ProdutoService
   ) { }
 
