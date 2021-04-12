@@ -1,29 +1,26 @@
 <div class="container mt-5 mb-5">
 
     <div class="row mb-5">
-          <div class="col-md-12">
-              <h1 class="text-center">Todos os produtos</h1>
-          </div>
+      <div class="col-md-12">
+          <h1 class="text-center">Todos os produtos</h1>
       </div>
-  
+    </div>
+
+
     <div class="row">
       <!--div envolvendo todos os cards-->
       <div class="col-sm-4 mb-3" *ngFor='let produto of listaProdutos'>
   
         <!--cada card com o produto-->
         <div class="card" [routerLink]="['/produto', produto.id]">
-          <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
-  
-          <div class="card-body">
-            <h4 class="card-title">{{produto.nome}}</h4>
-            <small class="text-muted">Categoria: {{produto.categoria.nome}}</small>
-            <p class="card-text">{{produto.descricao}}</p>
-            <p>R$ {{produto.valor.toFixed(2)}}</p>
-            <p>{{produto.estoque}} unidades disponíveis</p>
+          <div class="d-flex justify-content-center">
+            <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
           </div>
-  
-          <div class="card-footer">
-            <a class="btn btn-verde w-100" [routerLink]="['/produto', produto.id]">Ver produto</a>
+          <div class="card-body text-center">
+            <h4 class="nome">{{produto.nome}}</h4>
+            <small class="text-muted">{{produto.categoria.nome}}</small>
+            <p id="preco">R$ {{produto.valor.toFixed(2)}}</p>
+              <a class="btn btn-verde w-100" [routerLink]="['/produto',produto.id]">Ver produto</a>
           </div>
         </div>
   
