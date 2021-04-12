@@ -1,13 +1,27 @@
-@font-face {
-  font-family: bastian;
-  src: url(/assets/fontes/bastian_sidney/Bastian\ Sidney.ttf);
-}
 .btn-verde {
   color: white;
   background-color: #1c372c;
 }
 .btn-verde:hover {
   background-color: #346350;
+}
+.card {
+  cursor: pointer;
+}
+.card-footer {
+  background-color: white;
+  border-top: none;
+}
+@font-face {
+  font-family: bastian;
+  src: url(/assets/fontes/bastian_sidney/Bastian\ Sidney.ttf);
+}
+.titulo{
+  text-align: center;
+  color: #1c372c;
+  font-family: bastian;
+  font-size: 70pt;
+  margin-bottom: 0;
 }
 h1 {
   text-align: center;
@@ -16,19 +30,7 @@ h1 {
   font-family: bastian;
   font-size: 100pt;
 }
-h2 {
-  font-size: 40px;
-  text-align: center;
-}
-h3 {
+#preco{
   color: #884f0e;
-  font-size: 30px;
-  text-align: center;
-}
-.card {
-  cursor: pointer;
-}
-.card-footer {
-  background-color: white;
-  border-top: none;
+  font-size: 40px;
 }

@@ -14,7 +14,7 @@
       <!--cada card com o produto-->
       <div class="card" [routerLink]="['/produto', produto.id]">
         <div class="d-flex justify-content-center">
-          <img class="img-fluid" src="{{produto.imagem}}">
+          <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
         </div>
         <div class="card-body text-center">
           <h4 class="nome">{{produto.nome}}</h4>

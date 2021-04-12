@@ -5,30 +5,25 @@
 			<h1 class="text-center">{{categoria.nome}}</h1>
 		</div>
 	</div>
-    
+
   <div class="row">
     <!--div envolvendo todos os cards-->
     <div class="col-sm-4 mb-3" *ngFor='let produto of categoria.produto'>
 
       <!--cada card com o produto-->
       <div class="card" [routerLink]="['/produto', produto.id]">
-
-        <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
-        
-        <div class="card-body">
-          <h2 class="card-title">{{produto.nome}}</h2>
-          <h3>R$ {{produto.valor.toFixed(2)}}</h3>
+        <div class="d-flex justify-content-center">
+          <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
         </div>
-        
-        <div class="card-footer">
-          <a class="btn btn-verde w-100" [routerLink]="['/produto', produto.id]">Ver produto</a>                      
+        <div class="card-body text-center">
+          <h4 class="nome">{{produto.nome}}</h4>
+          <p id="preco">R$ {{produto.valor.toFixed(2)}}</p>
+            <a class="btn btn-verde w-100" [routerLink]="['/produto',produto.id]">Ver produto</a>
         </div>
-
       </div>
 
     </div>
   </div>
-
 
 </div>
 
