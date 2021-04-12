@@ -2,6 +2,11 @@
     font-family: bastian;
     src: url(/assets/fontes/bastian_sidney/Bastian\ Sidney.ttf);
 }
+#logo-top{
+    height: 100px;
+    margin-top: 4px;
+}
+
 .bg{
     background-color: #1c372c;
     color: white;

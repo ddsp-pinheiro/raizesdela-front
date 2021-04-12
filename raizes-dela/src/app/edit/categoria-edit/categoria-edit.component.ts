@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
 import { Usuario } from 'src/app/model/Usuario';
+import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { environment } from 'src/environments/environment.prod';
 import Swal from 'sweetalert2';
@@ -25,6 +26,7 @@ export class CategoriaEditComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    public authService: AuthService,
     private categoriaService: CategoriaService
   ) { }
 
@@ -49,6 +51,17 @@ export class CategoriaEditComponent implements OnInit {
     this.categoriaService.getByIdCategoria(id).subscribe((resp: Categoria) => {
       this.categoria = resp;
     })
+  }
+
+  sair() {
+    environment.token = ''
+    environment.nome = ''
+    environment.id = 0
+    environment.imagem = '',
+    environment.tipoVendedor = false,
+    environment.tipoAdministrador = false
+    this.router.navigate(["/home"])
+    Swal.fire('Sessão finalizada')
   }
 
   cadastrar(){
