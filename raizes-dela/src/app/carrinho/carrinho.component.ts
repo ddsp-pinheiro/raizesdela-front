@@ -2,6 +2,8 @@ import { Produto } from './../model/Produto';
 import { AuthService } from './../service/auth.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-carrinho',
@@ -25,6 +27,16 @@ export class CarrinhoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
+    if (environment.token == "") {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'É preciso estar logado para acessar o carrinho'
+      })
+      this.router.navigate(["/login"])
+    }
+
     this.exibirCarrinho()
     this.total()
   }

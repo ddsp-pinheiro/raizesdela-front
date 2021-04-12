@@ -6,32 +6,29 @@
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="col-md-12">
+  <div class="row">
+    <!--div envolvendo todos os cards-->
+    <div class="col-sm-4 mb-3" *ngFor='let produto of user.produto'>
 
-        <!--div envolvendo todos os cards-->
-        <div class="card-columns">
-          <!--cada card com o produto-->
-          <div class="card" *ngFor='let produto of user.produto'>
+      <!--cada card com o produto-->
+      <div class="card">
+        <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
 
-            <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
-
-            <div class="card-body"></div>
-
-            <div class="card-footer">
-              <h4 class="card-title">{{produto.nome}}</h4>
-              <small class="text-muted">Categoria: {{produto.categoria.nome}}</small>
-              <p class="card-text">{{produto.descricao}}</p>
-              <p>R$ {{produto.valor.toFixed(2)}}</p>
-              <p>Estoque: {{produto.estoque}} unidades</p>
-
-              <a [routerLink]="['/produto-delete', produto.id]" id="btn-1" class="btn mr-1">Apagar</a>
-              <a [routerLink]="['/produto-edit', produto.id]" id="btn-2" class="btn ml-1">Editar</a>
-            </div>
-
-          </div>
+        <div class="card-body">
+          <h4 class="card-title">{{produto.nome}}</h4>
+          <small class="text-muted">Categoria: {{produto.categoria.nome}}</small>
+          <p class="card-text">{{produto.descricao}}</p>
+          <p>R$ {{produto.valor.toFixed(2)}}</p>
+          <p>{{produto.estoque}} unidades disponíveis</p>
         </div>
+
+        <div class="card-footer">
+          <a [routerLink]="['/produto-delete', produto.id]" id="btn-1" class="btn mr-1">Apagar</a>
+          <a [routerLink]="['/produto-edit', produto.id]" id="btn-2" class="btn ml-1">Editar</a>
+        </div>
+      </div>
 
     </div>
   </div>
+  
 </div>

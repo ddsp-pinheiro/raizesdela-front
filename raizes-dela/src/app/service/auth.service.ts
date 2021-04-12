@@ -55,8 +55,8 @@ export class AuthService {
     let user = {
       nome: environment.nome,
       id: environment.id,
-      tipoVendedor: environment.tipoVendedor
-
+      tipoVendedor: environment.tipoVendedor,
+      tipoAdministrador: environment.tipoAdministrador
     }
     return user
   }

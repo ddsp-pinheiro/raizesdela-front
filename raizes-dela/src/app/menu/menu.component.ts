@@ -8,6 +8,7 @@ import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-menu',
@@ -27,6 +28,7 @@ export class MenuComponent implements OnInit {
   token = environment.token
   id = environment.id
   tipoUsuario = environment.tipoVendedor
+  tipoAdministrador = environment.tipoAdministrador
   busca: string
 
   constructor(
@@ -38,8 +40,6 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
-
     this.getAllCategoria()    
   }
 
@@ -68,10 +68,14 @@ export class MenuComponent implements OnInit {
   }
 
   sair() {
-    this.router.navigate(["/home"])
     environment.token = ''
     environment.nome = ''
     environment.id = 0
+    environment.imagem = '',
+    environment.tipoVendedor = false,
+    environment.tipoAdministrador = false
+    this.router.navigate(["/home"])
+    Swal.fire('Sessão finalizada')
   }
 
 }

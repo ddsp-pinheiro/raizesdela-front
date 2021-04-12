@@ -33,14 +33,10 @@ export class CategoriaEditComponent implements OnInit {
 
     if (environment.token == "") {
       Swal.fire('Sua sessão expirou')
-
       this.router.navigate(["/home"])
     }
-
     this.findAllCategorias()
-
     let id = this.route.snapshot.params["id"]
-
   }
 
   findAllCategorias(){

@@ -2,13 +2,12 @@
 #btn-1{
     color: white;
     background-color: #884f0e;
-  }
-  #btn-2{
-    color: white;
-    background-color: #1c372c;
-  }
-  .card-footer {
-      background-color: #ffffff;
-      border-top: none;
-  }
-  
+}
+#btn-2{
+  color: white;
+  background-color: #1c372c;
+}
+.card-footer {
+  background-color: white;
+  border-top: none;
+}

@@ -7,4 +7,5 @@ export class Usuario{
     public senha: string
     public produto: Produto[]
     public tipoVendedor: boolean
+    public tipoAdministrador: boolean
 }
