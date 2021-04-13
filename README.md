@@ -28,7 +28,7 @@ Aqui colocar imagens do site quando finalizado
 - [x] Histórias reais
 - [x] Carrinho
 
-<h4>Funcionalidades da aplicação</h4>
+<h4>Implementações futuras</h4>
 
 - [ ] Pagamento
 - [ ] Acessibilidade 
