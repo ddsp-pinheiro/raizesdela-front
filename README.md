@@ -16,10 +16,22 @@ Aqui colocar imagens do site quando finalizado
 
 <h2>Funcionalidades da aplicação</h2>
 
-- [x] Cadastro de usuário
+- [x] Cadastro da produtora
 - [x] Cadastro de cliente
+- [x] Cadastro de categoria (administrador)
+- [x] Cadastro de produtos
+- [x] Login de cliente/produtora
+- [x] Pesquisa de produtos
+- [x] Atualizar usuários/produtos
+- [x] Apagar usuários/produtos
+- [x] Sobre nós
+- [x] Histórias reais
+- [x] Carrinho
 
-- [ ] Cadastro de produtos
+<h4>Funcionalidades da aplicação</h4>
+
+- [ ] Pagamento
+- [ ] Acessibilidade 
 
 
 
