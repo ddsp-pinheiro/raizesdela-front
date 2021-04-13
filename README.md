@@ -16,13 +16,15 @@ Projeto integrador proposto pelo bootcamp Generation Brasil, para finalizar o cu
 
 <h2>Imagens</h2>
 
-![image]()
-![image]()
 
-<img alt="Tabelas" src="https://user-images.githubusercontent.com/72114647/114491782-96884700-9bed-11eb-8288-fde6be2bd92b.png"/>
+
 <h6>Página home do site</h6>
-<img alt="Tabelas" src="https://user-images.githubusercontent.com/72114647/114491817-abfd7100-9bed-11eb-92a2-b8536a702b12.png"/>
+<img alt="Tabelas" src="https://user-images.githubusercontent.com/72114647/114491782-96884700-9bed-11eb-8288-fde6be2bd92b.png"/>
 <h6>Visão da produtora sobre os produtos cadastrados</h6>
+<img alt="Tabelas" src="https://user-images.githubusercontent.com/72114647/114491817-abfd7100-9bed-11eb-92a2-b8536a702b12.png"/>
+<h6>Página sobre nós</h6>
+<img alt="Tabelas" src="https://user-images.githubusercontent.com/72114647/114491999-0991bd80-9bee-11eb-8ed4-188091b69719.png"/>
+
 
 <h2>Funcionalidades da aplicação</h2>
 
