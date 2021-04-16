@@ -103,7 +103,8 @@ export class CategoriaComponent implements OnInit {
           descricao: this.produto.descricao,
           usuario: this.produto.usuario,
           quantidade: this.quant,
-          valorParcial: this.vParcial
+          valorParcial: this.vParcial,
+          comentario: this.produto.comentario
         })
       localStorage.setItem('carrinho', JSON.stringify(this.carrinho))
       Swal.fire({

@@ -1,3 +1,4 @@
+import { Comentario } from "./Comentario"
 import { Produto } from "./Produto"
 
 export class Usuario{
@@ -8,4 +9,5 @@ export class Usuario{
     public produto: Produto[]
     public tipoVendedor: boolean
     public tipoAdministrador: boolean
+    public comentario: Comentario[]
 }

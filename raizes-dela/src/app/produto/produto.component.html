@@ -40,4 +40,59 @@
       </div>
     </div>
   </div>
+<!-- comentários -->
+  <div class="accordion" [attr.id]="'comentProduto' + produto.id">
+
+    <div class="mt-2" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
+          [attr.data-target]="'#' + 'comentButtonProduto' + produto.id" aria-expanded="false"
+          aria-controls="collapseTwo">
+          <p class="text-primary font-weight-bold mb-2">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i> Comentar
+          </p>
+        </button>
+      </h5>
+    </div>
+
+    <div [attr.id]="'comentButtonProduto' + produto.id" class="collapse" aria-labelledby="headingTwo"
+      [attr.data-parent]="'#' + 'comentProduto' + produto.id">
+
+      <div class="row mb-3">
+        <div class="col d-flex justify-content-center align-items-center p-4">
+          <div class="input-group w-100">
+            <input type="text" class="form-control mr-2" placeholder="Digite aqui seu comentário"
+              aria-label="Recipient's username" aria-describedby="button-addon2" [(ngModel)]='comentario.texto'
+              id='inputComentario'>
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" (click)='comentar(produto.id)'
+                id="button-addon2">Comentar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row d-flex justify-content-center"
+        *ngFor='let coment of produto.comentario'>
+        <div class="col-md-11">
+          <div class="card mb-3 shadow border-0 rounded">
+            <div class="card-body">
+              <div class="row">
+                <div class="col d-flex justify-content-start">
+                  <p> {{coment.usuario.nome}} comentou: </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <p class="card-text ml-4" aria-describedby="texto">{{coment.texto}} </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- comentários -->
 </div>

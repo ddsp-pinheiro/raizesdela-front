@@ -1,4 +1,5 @@
 import { Categoria } from "./Categoria"
+import { Comentario } from "./Comentario"
 import { Usuario } from "./Usuario"
 
 export class Produto{
@@ -13,5 +14,7 @@ export class Produto{
 
     public quantidade: number
     public valorParcial: number
+
+    public comentario: Comentario[]
 
 }
