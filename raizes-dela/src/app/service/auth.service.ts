@@ -1,4 +1,3 @@
-import { Produto } from './../model/Produto';
 import { environment } from './../../environments/environment.prod';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -22,15 +21,15 @@ export class AuthService {
   }
 
   entrar(userLogin: UsuarioLogin): Observable<UsuarioLogin>{
-    return this.http.post<UsuarioLogin>('http://localhost:8080/usuario/logar', userLogin)
+    return this.http.post<UsuarioLogin>(`${environment.baseUrl}/usuario/logar`, userLogin)
   }
 
   cadastrar(user: Usuario): Observable<Usuario>{
-    return this.http.post<Usuario>('http://localhost:8080/usuario/cadastrar', user)
+    return this.http.post<Usuario>(`${environment.baseUrl}/usuario/cadastrar`, user)
   }
 
   getByIdUser(id: number): Observable<Usuario> {
-    return this.http.get<Usuario>(`http://localhost:8080/usuario/${id}`, this.token);
+    return this.http.get<Usuario>(`${environment.baseUrl}/usuario/${id}`, this.token);
   }
 
   logado(){

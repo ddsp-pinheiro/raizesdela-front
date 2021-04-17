@@ -16,26 +16,26 @@ export class ProdutoService {
   }
 
   getAllProduto(): Observable <Produto[]>{
-    return this.http.get<Produto[]>("http://localhost:8080/produto")
+    return this.http.get<Produto[]>(`${environment.baseUrl}/produto`)
   }
 
   getByIdProduto(id:number): Observable <Produto>{
-    return this.http.get<Produto>(`http://localhost:8080/produto/${id}`)
+    return this.http.get<Produto>(`${environment.baseUrl}/produto/${id}`)
   }
 
   getByNameProduto(nome:string): Observable <Produto[]>{
-    return this.http.get<Produto[]>(`http://localhost:8080/produto/nome/${nome}`)
+    return this.http.get<Produto[]>(`${environment.baseUrl}/produto/nome/${nome}`)
   }
 
   postProduto(produto:Produto):Observable<Produto>{
-    return this.http.post<Produto>("http://localhost:8080/produto",produto,this.token)
+    return this.http.post<Produto>(`${environment.baseUrl}/produto`,produto,this.token)
   }
 
   putProduto(produto:Produto):Observable<Produto>{
-    return this.http.put<Produto>("http://localhost:8080/produto",produto,this.token)
+    return this.http.put<Produto>(`${environment.baseUrl}/produto`,produto,this.token)
   }
 
   deleteProduto(id:number):Observable<Produto>{
-    return this.http.delete<Produto>(`http://localhost:8080/produto/${id}`, this.token)
+    return this.http.delete<Produto>(`${environment.baseUrl}/produto/${id}`, this.token)
   }
 }
