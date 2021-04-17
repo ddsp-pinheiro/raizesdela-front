@@ -19,7 +19,6 @@
 .titulo{
   text-align: center;
   color: #1c372c;
-  font-family: bastian;
   font-size: 70pt;
   margin-bottom: 0;
 }
@@ -27,7 +26,6 @@ h1 {
   text-align: center;
   color: #1c372c;
   margin-bottom: 10px;
-  font-family: bastian;
   font-size: 100pt;
 }
 #preco{

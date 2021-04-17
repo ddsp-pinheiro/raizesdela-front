@@ -7,8 +7,7 @@ h1{
   text-align: center;
   color: #1c372c;
   margin-bottom: 20px;
-  font-size: 70pt;
- font-family: bastian;
+  font-size: 100pt;
 }
 
 p{
@@ -67,7 +66,6 @@ p{
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-family: bastian;
   font-size: 80pt;
 }
 

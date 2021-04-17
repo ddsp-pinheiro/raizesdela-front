@@ -108,7 +108,7 @@
   padding-right: 50px;
 }
 
-@font-face {
+ @font-face {
   font-family: bastian;
   src: url(/assets/fontes/bastian_sidney/Bastian\ Sidney.ttf);
 }
@@ -116,7 +116,6 @@ h3{
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-family: bastian;
   font-size: 55pt;
   position: absolute;
   padding-top: 110px;
