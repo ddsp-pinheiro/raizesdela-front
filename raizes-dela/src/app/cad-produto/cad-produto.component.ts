@@ -22,7 +22,7 @@ export class CadProdutoComponent implements OnInit {
 
   categoria: Categoria = new Categoria
   listaCategoria: Categoria[]
-  idCategoria:number
+  idCategoria: number
 
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
@@ -38,7 +38,7 @@ export class CadProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
 
     if (environment.token == "") {
       Swal.fire('Sua sessão expirou')
@@ -49,14 +49,14 @@ export class CadProdutoComponent implements OnInit {
     this.getAllCategoria()
   }
 
-  getAllCategoria(){
-    this.categoriaService.getAllCategoria().subscribe((resp:Categoria[])=>{
-      this.listaCategoria=resp
+  getAllCategoria() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp
     })
   }
 
-  findCategoriaById(){
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp:Categoria)=>{
+  findCategoriaById() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria = resp
     })
   }
@@ -68,29 +68,28 @@ export class CadProdutoComponent implements OnInit {
     this.usuario.id = this.idUsuario
     this.produto.usuario = this.usuario
 
-    if(this.produto == null) {
+    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+      this.produto = resp
+      Swal.fire({
+        icon: 'success',
+        title: 'Boa!',
+        text: 'Produto cadastrado com sucesso!'
+      })
+      this.produto = new Produto
+      this.router.navigate(['/meus-produtos'])
+    }, erro => {
       Swal.fire({
         icon: 'warning',
         title: 'Oops...',
-        text: 'Preencha os campos corretamente!'
+        text: 'Preencha os campos corretamente!',
       })
-    } else {
-      this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=> {
-        this.produto = resp
-          Swal.fire({
-            icon: 'success',
-            title: 'Boa!',
-            text: 'Produto cadastrado com sucesso!'
-          })
-          this.produto = new Produto
-          this.router.navigate(['/meus-produtos'])
-      })
-    }
+    })
+
   }
 
-  mascaraCEP(){
-    this.cep =this.cep.replace(/\D/g,"")                 //Remove tudo o que não é dígito
-    this.cep =this.cep.replace(/(\d{5})(\d)/,"$1-$2")    //Coloca hífen entre o quarto e o quinto dígitos
+  mascaraCEP() {
+    this.cep = this.cep.replace(/\D/g, "")                 //Remove tudo o que não é dígito
+    this.cep = this.cep.replace(/(\d{5})(\d)/, "$1-$2")    //Coloca hífen entre o quarto e o quinto dígitos
     return this.cep
   }
 }
