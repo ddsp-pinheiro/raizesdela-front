@@ -30,7 +30,7 @@
     <div class="d-flex justify-content-center">
       <button type="submit" id="continuar" class="btn mr-3" routerLink="/home"><strong>Continuar
           comprando</strong></button>
-      <button type="submit" id="comprar" class="btn" [routerLink]="['/pagamento', vTotal]"><strong>Ir para
+      <button type="submit" id="comprar" class="btn" [routerLink]="['/pagamento', vTotal.toFixed(2)]"><strong>Ir para
           Pagamento</strong></button>
     </div>
   </div>
