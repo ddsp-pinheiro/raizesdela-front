@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: Bastian;
-  src: url(/src/assets/fontes/bastian_sidney/Bastian\ Sidney.ttf);
+  src: url('/src/assets/fontes/Bastian-Sidney/Bastian-Sidney.ttf');
 }
 
 h1{
