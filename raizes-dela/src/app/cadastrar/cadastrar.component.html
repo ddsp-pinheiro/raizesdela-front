@@ -14,7 +14,7 @@
         placeholder="Seu nome" minlength="3" #name="ngModel">
     </div>
 
-    <div  *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger">
       <div *ngIf="name.errors.minlength">
         <p class="text-danger">Nome muito curto</p>
       </div>
@@ -34,10 +34,11 @@
 
     <div class="form-group">
       <label for="confirmSenha">Confirmar senha</label>
-      <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha" #senha="ngModel" minlength="6">
+      <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+        placeholder="Confirme sua senha" #senha="ngModel" minlength="6">
     </div>
 
-    <div  *ngIf="senha.invalid && (senha.dirty || senha.touched)" class="text-danger">
+    <div *ngIf="senha.invalid && (senha.dirty || senha.touched)" class="text-danger">
       <div *ngIf="senha.errors.minlength">
         <p class="text-danger">Senha muito curta</p>
       </div>

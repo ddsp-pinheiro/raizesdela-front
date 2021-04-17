@@ -7,12 +7,12 @@
 
   <div id="grup">
     <img src={{produto.imagem}}>
-    <!-- <img src="https://img.freepik.com/fotos-gratis/mandioca-organica-mandioca-mandioca-aipim-culinaria-brasileira-na-mesa-de-madeira-rustica_59529-637.jpg?size=626&ext=jpg" alt=""> -->
+
     <div class="col-5" id="txt-grup">
       <h2>{{produto.nome}}</h2>
-      <!-- <h2>MANDIOCAAAAAAA</h2> -->
+
       <h1>R${{produto.valor.toFixed(2)}}</h1>
-      <!-- <h1>R$ 300,00</h1> -->
+
 
       <!--Nova div quantidade-->
       <div id="quantrow" class="row">
@@ -34,21 +34,19 @@
       <button type="button" class="btn bb" (click)="addCarrinho()">Adicionar ao carrinho</button>
       <div id="descricao">
         <p><strong>DESCRIÇÃO: </strong>{{produto.descricao}}</p>
-        <!-- Lorem dolor sit amet consectetur adipisicing elit. Repellendus ut vero eveniet soluta nam
-                architecto, culpa blanditiis fugit! Fugit at aspernatur deserunt illo doloribus expedita, earum
-                consequuntur mollitia. Aliquid, quidem. -->
+
       </div>
     </div>
   </div>
 <!-- comentários -->
-  <div class="accordion" [attr.id]="'comentProduto' + produto.id">
+  <div class="accordion mt-5" [attr.id]="'comentProduto' + produto.id">
 
     <div class="mt-2" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
+      <h5 class="mb-0 d-flex justify-content-center">
+        <button class="btn btn-link collapsed hover" type="button" data-toggle="collapse"
           [attr.data-target]="'#' + 'comentButtonProduto' + produto.id" aria-expanded="false"
           aria-controls="collapseTwo">
-          <p class="text-success font-weight-bold mb-2">
+          <p class="text-white font-weight-bold mb-2 ">
             <i class="fa fa-comments-o" aria-hidden="true"></i> Comentários
           </p>
         </button>
@@ -66,7 +64,7 @@
               id='inputComentario'>
             <div class="input-group-append">
               <button class="btn" (click)='comentar(produto.id)'
-                id="button-addon2">Comentar</button>
+                id="button-addon2">Comentar </button>
             </div>
           </div>
         </div>
