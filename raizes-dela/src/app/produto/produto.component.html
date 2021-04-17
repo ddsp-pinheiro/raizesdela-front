@@ -31,7 +31,7 @@
       </div>
       <!--Fim nova div-->
 
-      <button type="button" class="btn" (click)="addCarrinho()">Adicionar ao carrinho</button>
+      <button type="button" class="btn bb" (click)="addCarrinho()">Adicionar ao carrinho</button>
       <div id="descricao">
         <p><strong>DESCRIÇÃO: </strong>{{produto.descricao}}</p>
         <!-- Lorem dolor sit amet consectetur adipisicing elit. Repellendus ut vero eveniet soluta nam
@@ -48,8 +48,8 @@
         <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
           [attr.data-target]="'#' + 'comentButtonProduto' + produto.id" aria-expanded="false"
           aria-controls="collapseTwo">
-          <p class="text-primary font-weight-bold mb-2">
-            <i class="fa fa-commenting-o" aria-hidden="true"></i> Comentar
+          <p class="text-success font-weight-bold mb-2">
+            <i class="fa fa-comments-o" aria-hidden="true"></i> Comentários
           </p>
         </button>
       </h5>
@@ -65,7 +65,7 @@
               aria-label="Recipient's username" aria-describedby="button-addon2" [(ngModel)]='comentario.texto'
               id='inputComentario'>
             <div class="input-group-append">
-              <button class="btn btn-outline-primary" (click)='comentar(produto.id)'
+              <button class="btn" (click)='comentar(produto.id)'
                 id="button-addon2">Comentar</button>
             </div>
           </div>
@@ -80,7 +80,7 @@
             <div class="card-body">
               <div class="row">
                 <div class="col d-flex justify-content-start">
-                  <p> {{coment.usuario.nome}} comentou: </p>
+                  <img class="img" id="tamanho" src="../../assets/img/folhinha.png" alt="folhinhas"><p> <b>{{coment.usuario.nome}} comentou:</b> </p>
                 </div>
               </div>
               <div class="row">
