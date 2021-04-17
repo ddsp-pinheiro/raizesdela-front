@@ -35,6 +35,7 @@ export class ProdutoComponent implements OnInit {
     window.scroll(0, 0)
     let id = this.aRoute.snapshot.params['id']
     this.findProdById(id)
+    this.findAllComentarios()
     this.quant = 1
     this.vParcial = this.produto.valor
   }

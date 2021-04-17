@@ -74,8 +74,8 @@
 
 
       <div class="row d-flex justify-content-center"
-        *ngFor='let coment of produto.comentario'>
-        <div class="col-md-11">
+        *ngFor='let coment of listaComentarios'>
+        <div class="col-md-11 " *ngIf='coment.produto.id == produto.id'>
           <div class="card mb-3 shadow border-0 rounded">
             <div class="card-body">
               <div class="row">
