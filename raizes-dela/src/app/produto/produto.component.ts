@@ -26,8 +26,8 @@ export class ProdutoComponent implements OnInit {
   listaComentarios: Comentario[]
 
   constructor(
-    private router: Router, 
-    private aRoute: ActivatedRoute, 
+    private router: Router,
+    private aRoute: ActivatedRoute,
     private produtoService: ProdutoService,
     private comentarioService: ComentarioService) { }
 
@@ -35,6 +35,7 @@ export class ProdutoComponent implements OnInit {
     window.scroll(0, 0)
     let id = this.aRoute.snapshot.params['id']
     this.findProdById(id)
+    this.findAllComentarios()
     this.quant = 1
     this.vParcial = this.produto.valor
   }
@@ -100,31 +101,41 @@ export class ProdutoComponent implements OnInit {
     }
   }
 
-  comentar(id: number){
-
-    this.usuario.id = this.idUser;
-    this.comentario.usuario = this.usuario;
-
-    this.produto.id = id;
-    this.comentario.produto = this.produto;
-
-    this.comentarioService.postComent(this.comentario).subscribe((resp: Comentario) => {
-      this.comentario = resp
+  comentar(id: number) {
+    if (environment.token == "") {
       Swal.fire({
-        icon: 'success',
-        title: 'Boa!',
-        text:'Comentário inserido com sucesso!'});
-      this.comentario = new Comentario();
-      this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() =>{
-      this.router.navigate(["/produto",this.produto.id])
-   })
-    }, err => {
-      console.log(this.comentario)
-    })
+        icon: 'error',
+        title: 'Oops...',
+        text: 'É preciso estar logado para comentar'
+      })
+      this.router.navigate(["/login"])
+
+    } else {
+      this.usuario.id = this.idUser;
+      this.comentario.usuario = this.usuario;
+
+      this.produto.id = id;
+      this.comentario.produto = this.produto;
+
+      this.comentarioService.postComent(this.comentario).subscribe((resp: Comentario) => {
+        this.comentario = resp
+        Swal.fire({
+          icon: 'success',
+          title: 'Boa!',
+          text: 'Comentário inserido com sucesso!'
+        });
+        this.comentario = new Comentario();
+        this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
+          this.router.navigate(["/produto", this.produto.id])
+        })
+      }, err => {
+        console.log(this.comentario)
+      })
+    }
   }
 
-  findAllComentarios(){
-    this.comentarioService.getAllComents().subscribe((resp: Comentario[])=>{
+  findAllComentarios() {
+    this.comentarioService.getAllComents().subscribe((resp: Comentario[]) => {
       this.listaComentarios = resp
     })
   }
