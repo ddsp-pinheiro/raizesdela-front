@@ -25,6 +25,8 @@ import { PesquisaComponent } from './pesquisa/pesquisa.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { TodosProdutosComponent } from './todos-produtos/todos-produtos.component';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +57,8 @@ import { TodosProdutosComponent } from './todos-produtos/todos-produtos.componen
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CurrencyMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

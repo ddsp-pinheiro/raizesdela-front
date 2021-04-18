@@ -28,6 +28,12 @@ export class CadProdutoComponent implements OnInit {
   idUsuario = environment.id
 
   cep: string
+  nomeValido = false;
+  descricaoValida = false;
+  fotoValida = false;
+  cidadeValida = false;
+  cepValido = false;
+  quantValida = false;
 
   constructor(
     private authService: AuthService,
@@ -48,6 +54,54 @@ export class CadProdutoComponent implements OnInit {
 
     this.getAllCategoria()
   }
+
+  // validacoes
+
+  validacao(condicao: boolean, event: any) {
+    let valid = false;
+    if (condicao) {
+      event.target.classList.remove("is-valid");
+      event.target.classList.add("is-invalid");
+    } else {
+      event.target.classList.remove("is-invalid");
+      event.target.classList.add("is-valid");
+      valid = true;
+    }
+    return valid;
+  }
+
+  validaNome(event: any) {
+    this.nomeValido = this.validacao(event.target.value.length < 3, event);
+  }
+
+  validaDescricao(event: any) {
+    this.descricaoValida = this.validacao(event.target.value.length < 10 || event.target.value.length > 200, event);
+  }
+
+  validaFoto(event: any) {
+    let regex = /\.(jpe?g|png)$/i
+    this.fotoValida = this.validacao(!regex.test(event.target.value) && event.target.value.length != 0, event)
+  }
+
+  validaQuant(event: any) {
+    this.quantValida = this.validacao(event.target.value.length < 1, event);
+  }
+
+  validaCidade(event: any) {
+    this.cidadeValida = this.validacao(event.target.value.length < 4, event);
+  }
+
+  validaCep(event: any) {
+    this.cepValido = this.validacao(event.target.value.length < 9 || event.target.value.maxlength > 9, event);
+  }
+
+  mascaraCEP() {
+    this.cep = this.cep.replace(/\D/g, "")                 //Remove tudo o que não é dígito
+    this.cep = this.cep.replace(/(\d{5})(\d)/, "$1-$2")    //Coloca hífen entre o quarto e o quinto dígitos
+    return this.cep
+  }
+
+  // validacoes
 
   getAllCategoria() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
@@ -87,9 +141,4 @@ export class CadProdutoComponent implements OnInit {
 
   }
 
-  mascaraCEP() {
-    this.cep = this.cep.replace(/\D/g, "")                 //Remove tudo o que não é dígito
-    this.cep = this.cep.replace(/(\d{5})(\d)/, "$1-$2")    //Coloca hífen entre o quarto e o quinto dígitos
-    return this.cep
-  }
 }

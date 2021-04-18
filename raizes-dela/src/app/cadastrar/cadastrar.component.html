@@ -10,38 +10,30 @@
     <div class="form-group">
       <h1 class="center">Cadastrar</h1>
       <label for="nome">Nome</label>
-      <input [(ngModel)]='user.nome' class="form-control" type="text" id="nome" aria-describedby="text"
-        placeholder="Seu nome" minlength="3" #name="ngModel">
-    </div>
-
-    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger">
-      <div *ngIf="name.errors.minlength">
-        <p class="text-danger">Nome muito curto</p>
-      </div>
+      <input [(ngModel)]='user.nome' (keyup)="validaNome($event)" class="form-control" type="text" id="nome" aria-describedby="text"
+        placeholder="Seu nome">
+        <div class="invalid-tooltip">Digite um nome válido.</div>
     </div>
 
     <div class="form-group">
       <label for="email">Email</label>
-      <input [(ngModel)]='user.email' class="form-control" type="email" id="email" aria-describedby="emailHelp"
-        placeholder="Seu email" #mail="ngModel" minlength="6">
+      <input [(ngModel)]='user.email' (keyup)="validaEmail($event)" class="form-control" type="email" id="email" aria-describedby="emailHelp"
+        placeholder="Seu email">
+        <div class="invalid-tooltip">Digite um e-mail válido.</div>
     </div>
 
     <div class="form-group">
-      <label for="senha">Senha</label>
-      <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
-        placeholder="Digite sua senha" minlength="6">
+      <label for="password">Senha</label>
+      <input  [(ngModel)]='user.senha' (keyup)="validaSenha($event)" class="form-control" type="password" name="senha" id="senha"
+        placeholder="Digite sua senha">
+        <div class="invalid-tooltip">A senha deve conter no mín 6 caracteres e máx 8.</div>
     </div>
 
     <div class="form-group">
-      <label for="confirmSenha">Confirmar senha</label>
-      <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha"
-        placeholder="Confirme sua senha" #senha="ngModel" minlength="6">
-    </div>
-
-    <div *ngIf="senha.invalid && (senha.dirty || senha.touched)" class="text-danger">
-      <div *ngIf="senha.errors.minlength">
-        <p class="text-danger">Senha muito curta</p>
-      </div>
+      <label for="password">Confirmar senha</label>
+      <input (keyup)="confirmSenha($event)" class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+        placeholder="Confirme sua senha">
+        <div class="invalid-tooltip">As senhas devem ser iguais.</div>
     </div>
 
     <div id="vendedora">
