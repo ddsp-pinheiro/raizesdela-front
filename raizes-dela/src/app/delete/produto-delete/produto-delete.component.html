@@ -1,39 +1,39 @@
 <div class="container mt-5 mb-5">
 
-	<div class="row">
-		<div class="col-md-12">
-			<h1 class="text-center">Apagar produto</h1>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">Apagar produto</h1>
+    </div>
+  </div>
 
-	<div class="row">
-		<div class="col-md-12">
-			<h4 class="text-center">Tem certeza que deseja apagar este produto?</h4>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="text-center">Tem certeza que deseja apagar este produto?</h4>
+    </div>
+  </div>
 
-	<div class="row d-flex justify-content-center mt-4">
-		<div class="col-md-4">
+  <div class="row d-flex justify-content-center mt-4">
+    <div class="col-md-4">
 
-            <div class="card">
-                <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
-                <div class="card-body">
-                    <h4 class="card-title">{{produto.nome}}</h4>
-                    <small class="text-muted">Categoria: {{produto.categoria.nome}}</small>
-                    <p class="card-text">{{produto.descricao}}</p>
-                    <p>R$ {{produto.valor}}</p>
-                    <p>Estoque: {{produto.estoque}} unidades</p>
-                </div>
-            </div>
-
-		</div>
-	</div>
-
-	<div class="row mt-5">
-        <div class="col-md-12 d-flex justify-content-center">
-            <button routerLink='/meus-produtos' type="submit" class="btn mr-4" id="btn-1">Cancelar</button>
-            <button (click)='apagar()' type="submit" class="btn" id="btn-2">Apagar</button>
+      <div class="card">
+        <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
+        <div class="card-body">
+          <h4 class="card-title">{{produto.nome}}</h4>
+          <small class="text-muted">Categoria: {{produto.categoria.nome}}</small>
+          <p class="card-text">{{produto.descricao}}</p>
+          <p>R$ {{produto.valor}}</p>
+          <p>Estoque: {{produto.estoque}} unidades</p>
         </div>
-	</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-md-12 d-flex justify-content-center">
+      <button routerLink='/meus-produtos' type="submit" class="btn mr-4" id="btn-1">Cancelar</button>
+      <button (click)='apagar()' type="submit" class="btn" id="btn-2">Apagar</button>
+    </div>
+  </div>
 
 </div>
