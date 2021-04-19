@@ -21,8 +21,8 @@
           <h4 class="card-title">{{produto.nome}}</h4>
           <small class="text-muted">Categoria: {{produto.categoria.nome}}</small>
           <p class="card-text">{{produto.descricao}}</p>
-          <p>R$ {{produto.valor}}</p>
-          <p>Estoque: {{produto.estoque}} unidades</p>
+          <p>R$ {{produto.valor.toFixed(2)}}</p>
+          <p>{{produto.estoque}} unidades disponíveis</p>
         </div>
       </div>
 
