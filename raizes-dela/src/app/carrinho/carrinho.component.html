@@ -10,7 +10,7 @@
       <!--"https://cd.shoppub.com.br/beirario/media/cache/fc/5c/fc5c9341d00c5d9598f6eb629344e42e.jpg"-->
       <div class="col-md-3">
         <p id="nome">{{item.nome}}</p>
-        <p id="preco">R$ {{item.valor.toFixed(2)}}</p>
+        <p id="preco">R$ {{item.valor.toFixed(2).replace('.', ',')}}</p>
       </div>
 
       <div class="col-md-3">
@@ -18,7 +18,7 @@
       </div>
 
       <div class="col-md-3">
-        <p id="precoParcial">R$ {{item.valorParcial.toFixed(2)}}</p>
+        <p id="precoParcial">R$ {{item.valorParcial.toFixed(2).replace('.', ',')}}</p>
       </div>
 
     </div>
@@ -26,7 +26,7 @@
 
   <div class="confirma">
     <hr>
-    <h3 id="total"><strong>TOTAL:</strong> R$ {{vTotal.toFixed(2)}} </h3>
+    <h3 id="total"><strong>TOTAL:</strong> R$ {{vTotal.toFixed(2).replace('.', ',')}} </h3>
     <div class="d-flex justify-content-center">
       <button type="submit" id="continuar" class="btn mr-3" routerLink="/home"><strong>Continuar
           comprando</strong></button>
