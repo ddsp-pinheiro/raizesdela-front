@@ -19,7 +19,7 @@
         <div class="card-body text-center">
           <h4 class="nome">{{produto.nome}}</h4>
           <small class="text-muted">{{produto.categoria.nome}}</small>
-          <p id="preco">R$ {{produto.valor.toFixed(2)}}</p>
+          <p id="preco">R$ {{produto.valor.toFixed(2).replace('.', ',')}}</p>
             <a class="btn btn-verde w-100" [routerLink]="['/produto',produto.id]">Ver produto</a>
         </div>
       </div>
