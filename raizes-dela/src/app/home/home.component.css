@@ -110,7 +110,7 @@
 
  @font-face {
   font-family: bastian;
-  src: url('/assets/fontes/Bastian-Sidney/Bastian-Sidney.ttf')
+  src: url(../../assets/fontes/Bastian-Sidney/Bastian-Sidney.ttf)
 }
 h3{
   text-align: center;
