@@ -2,11 +2,9 @@
   color: white;
   background-color: #1c372c;
 }
-
 .btn-verde:hover {
   background-color: #346350;
 }
-
 .cards {
   justify-content: space-around;
   display: flex;
@@ -16,31 +14,25 @@
   margin-bottom: 15vh;
   margin-top: 5vh;
 }
-
 #mg-pr {
   text-align: center;
   margin-bottom: 5vh;
 }
-
 #img-redo {
   width: 300px;
   height: 300px;
   justify-content: center;
 }
-
 #text1 {
   justify-content: center;
 }
-
 #button1 {
   text-align: center;
   padding-bottom: 100px;
 }
-
 .card-deck {
   align-items: center;
 }
-
 .title {
   color: #1c372c;
   font-size: 15px;
@@ -51,7 +43,6 @@
   position: relative;
   text-transform: uppercase;
 }
-
 .title::after {
   display: table;
   content: "";
@@ -63,7 +54,6 @@
   top: 9px;
   border-radius: 10px;
 }
-
 .title::before {
   display: table;
   content: "";
@@ -75,39 +65,33 @@
   top: 9px;
   border-radius: 10px;
 }
-
+.card {
+  cursor: pointer;
+}
 .cardInfo {
   padding-bottom: 100px;
 }
-
 .fotoPrincipal {
   margin-bottom: 80px;
   margin-top: 30px;
 }
-
 .title1 {
   padding-top: 10px;
   padding-bottom: 50px;
 }
-
 #carouselExampleIndicators {
   padding-bottom: 70px;
 }
-
 .imgRedondas {
-
   padding-top: 20px;
 }
-
 .ultimaImg {
   margin-bottom: 80px;
 }
-
 .botaop {
   padding-left: 50px;
   padding-right: 50px;
 }
-
  @font-face {
   font-family: bastian;
   src: url(../../assets/fontes/Bastian-Sidney/Bastian-Sidney.ttf)
@@ -126,7 +110,6 @@ h3{
   height: 300px;
   border-radius: 50%;
 }
-
 .carrossel {
   padding-bottom: 100px;
 }
