@@ -1,9 +1,9 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { HomeComponent } from './home/home.component';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LoginComponent } from './login/login.component';
 import { CadProdutoComponent } from './cad-produto/cad-produto.component';
