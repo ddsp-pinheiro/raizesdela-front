@@ -11,9 +11,9 @@ import Swal from 'sweetalert2';
   styleUrls: ['./cadastrar.component.css']
 })
 export class CadastrarComponent implements OnInit {
- 
+
   user: Usuario = new Usuario
-  
+
   confirmarSenha: string
   nomeValido: boolean = false;
   emailValido: boolean = false;
@@ -50,7 +50,7 @@ export class CadastrarComponent implements OnInit {
   }
 
   validaSenha(event: any){
-    this.senhaValida = this.validacao(event.target.value.length < 6 || event.target.value.length > 8, event)
+    this.senhaValida = this.validacao(event.target.value.length < 6 || event.target.value.length > 20, event)
   }
 
   confirmSenha(event: any) {
