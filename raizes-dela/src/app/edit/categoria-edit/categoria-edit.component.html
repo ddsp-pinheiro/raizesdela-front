@@ -1,0 +1,119 @@
+<div class="container-fluid">
+
+  <div class="row bg">
+    <div class="col-md-12">
+        <a class="logo" routerLink='/home'><img id="logo-top" src="../../assets/img/logo com texto.png" alt="Logo"></a>
+
+      <h1 id="titulo">Administrar categorias</h1>
+      <h5 class="text-center">Cadastre uma nova categoria:</h5>
+
+      <div class="row " id="formCat">
+        <div class="col-md-3">
+          <div class="form-group">
+            <input [(ngModel)]='categoria.nome' type="text" class="form-control" id="descricao"
+              placeholder="Digite a descrição da categoria">
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-light" (click)='cadastrar()' id="cadastrar">Cadastrar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h2 class="text-center">Todas as categorias</h2>
+    </div>
+  </div>
+
+  <div class="row mt-3 mb-5 d-flex justify-content-center" id="formCat">
+    <div class="col-md-6">
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col" class="d-flex justify-content-end">Modificações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let item of listaCategoria'>
+            <th>{{item.id}}</th>
+            <td>{{item.nome}}</td>
+            <td class="d-flex justify-content-end">
+              <a class="btn btn-outline-info mr-3" id="editar" data-toggle="modal" data-target="#editCategoria"
+                (click)="findByIdCategoria(item.id)">Editar</a>
+              <a class="btn btn-outline-danger" id="apagar" data-toggle="modal" data-target="#deleteCategoria"
+                (click)="findByIdCategoria(item.id)">Apagar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Modal de edição de categoria -->
+<div class="modal fade" id="editCategoria" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Editar categoria {{categoria.nome}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <input [(ngModel)]='categoria.nome' type="text" class="form-control" id="nome"
+            placeholder="Digite o novo nome da categoria.">
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" id="cancelar" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn" id="excluir" (click)='atualizar()' data-dismiss="modal">Atualizar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de deleção de categoria -->
+<div class="modal fade" id="deleteCategoria" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="row">
+          <h4 class="modal-title" id="TituloModalCentralizado">Apagar a categoria {{categoria.nome}}</h4>
+        </div>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <div class="modal-body">
+          <h5>Você tem certeza que deseja apagar a categoria {{categoria.nome}}? Todos os produtos relacionados a ela
+            serão igualmente excluídos</h5>
+        </div>
+
+        <button type="button" class="btn mr-4" id="cancelar" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn" id="excluir" (click)='apagar(categoria.id)'
+          data-dismiss="modal">Apagar</button>
+      </div>
+    </div>
+  </div>
+</div>

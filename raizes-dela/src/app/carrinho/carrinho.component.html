@@ -1,23 +1,36 @@
-<body>
-    <div class="container" id="container-produto">
-        <div id="produto">
-            <img src="https://cd.shoppub.com.br/beirario/media/cache/fc/5c/fc5c9341d00c5d9598f6eb629344e42e.jpg" alt="">
-            <p id="nome">nomeProduto</p>
-            <p id="preco">R$: 0,00</p>
-            <input type="number">
-            <p id="naosei">parcial</p>
-        </div>
-    </div>
+<div class="container">
+  <h1 class="mt-3 bastian">Carrinho</h1>
+  <h5 id="vazio">{{vazio}}</h5>
 
-    <div class="container">
-        <div class="confirma">
-            <hr>
-            <h3 id="total"><strong>TOTAL:</strong> 0,00</h3>
-            <div class="d-flex justify-content-center">
-                <button type="submit" class="btn"><strong>Comprar</strong></button>
-            </div>
-        </div>
-    </div>
+  <div class=" container-fluid" id="container-produto">
 
-    
-</body>
+    <div class="row" id="produto" *ngFor="let item of carrinho">
+
+      <div class="col-md-2"> <img class="rounded-circle" src={{item.imagem}} alt=""></div>
+      <!--"https://cd.shoppub.com.br/beirario/media/cache/fc/5c/fc5c9341d00c5d9598f6eb629344e42e.jpg"-->
+      <div class="col-md-3">
+        <p id="nome">{{item.nome}}</p>
+        <p id="preco">R$ {{item.valor.toFixed(2).replace('.', ',')}}</p>
+      </div>
+
+      <div class="col-md-3">
+        <p class="bastian" id="quantidade">x {{item.quantidade}}</p>
+      </div>
+
+      <div class="col-md-3">
+        <p id="precoParcial">R$ {{item.valorParcial.toFixed(2).replace('.', ',')}}</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="confirma">
+    <hr>
+    <h3 id="total"><strong>TOTAL:</strong> R$ {{vTotal.toFixed(2).replace('.', ',')}} </h3>
+    <div class="d-flex justify-content-center">
+      <button type="submit" id="continuar" class="btn mr-3" routerLink="/home"><strong>Continuar
+          comprando</strong></button>
+      <button type="submit" id="comprar" class="btn" [routerLink]="['/pagamento', vTotal.toFixed(2)]"><strong>Ir para
+          Pagamento</strong></button>
+    </div>
+  </div>

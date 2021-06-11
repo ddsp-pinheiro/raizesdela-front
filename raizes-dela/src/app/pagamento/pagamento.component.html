@@ -1,0 +1,134 @@
+<div class="container">
+
+  <h2 class="bastian h2 text-center mt-3 mb-3">Pagamento</h2>
+
+  <h1 id="valorTotal" class="text-center">R$ {{total}}</h1> <!--Valor interpolado-->
+
+  <label>Endereço de Entrega</label>
+  <input [(ngModel)]="endereco" id="endereco"type="text" class="form-control">
+  <div class="row form-row mb-3">
+    <div class="col-md-8">
+      <label>Cidade</label>
+      <input [(ngModel)]="cidade"id="cidade"type="text" class="form-control">
+    </div>
+    <div class="col-md-1">
+      <label>Estado</label>
+      <select type="text" class="form-control">
+        <option value="AC">AC</option>
+        <option value="AL">AL</option>
+        <option value="AM">AM</option>
+        <option value="AP">AP</option>
+        <option value="BA">BA</option>
+        <option value="CE">CE</option>
+        <option value="DF">DF</option>
+        <option value="ES">ES</option>
+        <option value="GO">GO</option>
+        <option value="MA">MA</option>
+        <option value="MG">MG</option>
+        <option value="MS">MS</option>
+        <option value="MT">MT</option>
+        <option value="PA">PA</option>
+        <option value="PB">PB</option>
+        <option value="PE">PE</option>
+        <option value="PI">PI</option>
+        <option value="PR">PR</option>
+        <option value="RJ">RJ</option>
+        <option value="RN">RN</option>
+        <option value="RO">RO</option>
+        <option value="RR">RR</option>
+        <option value="RS">RS</option>
+        <option value="SC">SC</option>
+        <option value="SE">SE</option>
+        <option value="SP">SP</option>
+        <option value="TO">TO</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label>CEP</label>
+      <input [(ngModel)]="cep" id="cep" placeholder="XXXXX-XXX" type="text" maxlength="9" class="form-control" (keyup)="mascaraCEP()">
+    </div>
+  </div>
+  <nav class="mb-3">
+    <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+
+      <a class="nav-item nav-link active text-secundary" id="boleto-tab" data-toggle="tab" href="#boleto" role="tab"
+        aria-controls="nav-boleto" aria-selected="true"><b>Boleto</b></a>
+
+      <a class="nav-item nav-link text-secundary" id="cartao-tab" data-toggle="tab" href="#cartao" role="tab"
+        aria-controls="nav-cartao" aria-selected="false" ><b>Cartão</b></a> <!-- (click)="validaBoleto()" -->
+    </div>
+  </nav>
+
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="boleto" role="tabpanel" aria-labelledby="boleto-tab">
+      <p class="text-center">Os boletos gerados devem ser pagos em até 3 dias úteis. Aguarde confirmação por email</p>
+
+      <div class="d-flex justify-content-center">
+        <a class="btn btn-tijolo mr-5" routerLink="/carrinho"  >Cancelar</a>
+        <a class="btn btn-verde"  (click)="validaBoleto()">Gerar Boleto</a> <!--href = "" target="_blank"-->
+      </div>
+    </div>
+  <div class="tab-pane fade" id="cartao" role="tabpanel" aria-labelledby="cartao-tab">
+     <div class="container form-group">
+      <label>Forma de Pagamento</label>
+      <select class="form-control">
+        <option value="1">À vista</option>
+        <option value="2">Parcelado em 2X</option>
+      </select>
+
+      <div class="form-row mb-3">
+        <div class="col-md-8">
+          <label>Nome no Cartão</label>
+          <input [(ngModel)]="nomeCartao" id="nomeCartao" type="text" class="form-control">
+        </div>
+        <div class="col-md-4">
+          <label>Número do CPF</label>
+          <input [(ngModel)]="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX" type="text" class="form-control" maxlength="14" (keyup)="mascaraCPF()">
+        </div>
+      </div>
+
+      <div class="form-row mb-3">
+        <div class="col-md-6">
+          <label>Número do Cartão</label>
+          <input [(ngModel)]="noCartao" id="noCartao" placeholder="XXXX XXXX XXXX XXXX" type="text" class="form-control" maxlength="19"(keyup)="mascaraNo()">
+        </div>
+        <div class="col-md-2">
+          <label>Código de segurança</label>
+          <input [(ngModel)]="cvv" id="cvv" placeholder="XXX" type="text" class="form-control" maxlength="4"(keyup)="mascaraCVV()">
+        </div>
+        <div class="col-md-2">
+          <label>Mês de Validade</label>
+          <select class="form-control">
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label>Ano de Validade</label>
+          <select class="form-control">
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <a class="btn btn-tijolo mr-5" routerLink="/carrinho" >Cancelar</a>
+         <a class="btn btn-verde" (click)="validaCartao()"> Pagar</a>
+      </div>
+    </div>
+  </div>
+

@@ -1,8 +1,10 @@
 <h2>Status</h2>
- 🚧   Em construção...  🚧
+<a href="https://raizes-dela.herokuapp.com/home" target="_blank">✅Pronto✅</a> (aguarde novas atualizações...)
 
 <p align="center">
+<a target="_blank" href="https://raizes-dela.herokuapp.com/home">
   <img src="https://user-images.githubusercontent.com/72114647/112768649-59b82f80-8ff3-11eb-9453-a14ca99adaec.png" alt="Raízes dela image"/>
+  </a>
 </p>
 
 <h4 align="center">Um e-commerce voltado para mulheres que querem promover produtos orgânicos e sustentáveis e dessa forma conseguirem renda para o sustento próprio e familiar.</h4>
@@ -11,15 +13,37 @@
 <h2>Projeto</h2>
 Projeto integrador proposto pelo bootcamp Generation Brasil, para finalizar o curso. Nesse repositório é possível ver o código do front-end do e-commerce, para acessar o back-end é só <a href="https://github.com/ddsp-pinheiro/raizesdela-PI/">clicar aqui</a>
 
+
 <h2>Imagens</h2>
-Aqui colocar imagens do site quando finalizado 
+
+
+
+<h6>Página home do site</h6>
+<img alt="Tabelas" src="https://user-images.githubusercontent.com/72114647/114491782-96884700-9bed-11eb-8288-fde6be2bd92b.png"/>
+<h6>Visão da produtora sobre os produtos cadastrados</h6>
+<img alt="Tabelas" src="https://user-images.githubusercontent.com/72114647/114491817-abfd7100-9bed-11eb-92a2-b8536a702b12.png"/>
+<h6>Página sobre nós</h6>
+<img alt="Tabelas" src="https://user-images.githubusercontent.com/72114647/114491999-0991bd80-9bee-11eb-8ed4-188091b69719.png"/>
+
 
 <h2>Funcionalidades da aplicação</h2>
 
-- [x] Cadastro de usuário
+- [x] Cadastro da produtora
 - [x] Cadastro de cliente
+- [x] Cadastro de categoria (administrador)
+- [x] Cadastro de produtos
+- [x] Login de cliente/produtora
+- [x] Pesquisa de produtos
+- [x] Atualizar usuários/produtos
+- [x] Apagar usuários/produtos
+- [x] Sobre nós
+- [x] Histórias reais
+- [x] Carrinho
 
-- [ ] Cadastro de produtos
+<h4>Implementações futuras</h4>
+
+- [ ] Pagamento
+- [ ] Acessibilidade 
 
 
 

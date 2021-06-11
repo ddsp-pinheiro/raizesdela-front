@@ -1,0 +1,77 @@
+@font-face {
+  font-family: Titulo;
+  src: url('../../assets/fontes/Geomanist-Regular-Italic/Geomanist-Regular.otf');
+}
+@font-face {
+  font-family: Texto;
+  src: url('../../assets/fontes/Ubuntu/Ubuntu-Light.ttf');
+}
+h1{
+  font-family: Titulo;
+  font-weight: bold;
+}
+label{
+  font-family: Texto;
+}
+button{
+  font-family: Texto;
+}
+.fundo{
+  background-color: #1c372c;
+  height: 1vh;
+
+}
+.backgroud{
+  background-color: #1c372c;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.imagem{
+  height: 100px;
+  align-self: flex-start;
+  margin: 25px;
+
+}
+
+#d-color{
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    min-width: 30vw;
+    margin: 5vh;
+    padding: 30px;
+    border-radius: 50px;
+    margin-top: 67px;
+    box-shadow: 2px 1px 1em;
+
+}
+.center{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.btn{
+    color: white;
+    background-color: #1c372c;
+}
+#enviar{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+#l-cadastro{
+    margin-top: 10px;
+}
+
+#vendedora{
+    text-align: center;
+}
+#nao{
+    margin-left: 30px;
+}
+#cadastrar{
+    margin-right: 15px;
+    background-color: #884f0e;
+}

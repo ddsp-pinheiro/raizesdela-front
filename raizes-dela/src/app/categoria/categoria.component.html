@@ -1,0 +1,29 @@
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center bastian">{{categoria.nome}}</h1>
+		</div>
+	</div>
+
+  <div class="row">
+    <!--div envolvendo todos os cards-->
+    <div class="col-sm-4 mb-3" *ngFor='let produto of categoria.produto'>
+
+      <!--cada card com o produto-->
+      <div class="card" [routerLink]="['/produto', produto.id]">
+        <div class="d-flex justify-content-center">
+          <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
+        </div>
+        <div class="card-body text-center">
+          <h4 class="nome">{{produto.nome}}</h4>
+          <p id="preco">R$ {{produto.valor.toFixed(2).replace('.', ',')}}</p>
+            <a class="btn btn-verde w-100" [routerLink]="['/produto',produto.id]">Ver produto</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+

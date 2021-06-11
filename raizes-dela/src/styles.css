@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Titulo;
+  src: url('/src/assets/fontes/Geomanist-Regular-Italic/Geomanist-Regular.otf');
+}
+
+@font-face {
+  font-family: Bastian;
+  src: url(/src/assets/fontes/Bastian-Sidney/Bastian-Sidney.ttf);
+}
+
+h1{
+  font-family: Titulo;
+  font-weight: bold;
+}
+h2{
+  font-family: Titulo;
+  font-weight: bold;
+}
+h3{
+  font-family: Titulo;
+  font-weight: bold;
+}
+.bastian{
+  font-family: Bastian;
+}
+
+h4{
+  font-family: Titulo;
+}
+h5{
+  font-family: Titulo;
+}
+h6{
+  font-family: Titulo;
+}
+p{
+  font-family: Texto;
+}
+label{
+  font-family: Texto;
+}
+option{
+  font-family: Texto;
+}
+div{
+  font-family: Texto;
+}
+small{
+  font-family: Texto;
+}
+

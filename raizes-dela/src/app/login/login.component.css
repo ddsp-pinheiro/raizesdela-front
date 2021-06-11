@@ -1,33 +1,46 @@
-body{
-    background-position: center center;
-    background-size: cover;
-    background-image: url(https://i.imgur.com/5NNWCl4.jpg);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
+.fundo{
+  background-color: #1c372c;
+  height: 1vh;
+
 }
-#d-color{
-    background-color: rgba(255, 255, 255, 0.8);
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-    margin: 20vh;
-    padding: 30px;
-    border-radius: 13%;
+.backgroud{
+  background-color: #1c372c;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
-.center{
-    text-align: center;
-    margin-bottom: 20px;
+.imagem{
+  height: 100px;
+  align-self: flex-start;
+  margin: 25px;
+
 }
-.btn{
-    color: white;
-    background-color: #283618;
+
+#d-color {
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 60vh;
+  margin: 20vh;
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 2px 1px 1em;
 }
-#enviar{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
+.center {
+  text-align: center;
+  margin-bottom: 20px;
 }
-#l-cadastro{
-    margin-top: 10px;
+.btn {
+  color: white;
+  background-color: #1c372c;
+}
+#enviar {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+#l-cadastro {
+  margin-top: 30px;
 }

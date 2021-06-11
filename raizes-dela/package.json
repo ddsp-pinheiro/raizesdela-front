@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compodoc": "npx compodoc -p tsconfig.app.json src"
   },
   "private": true,
   "dependencies": {
@@ -24,8 +25,10 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
+    "ng2-currency-mask": "^11.0.0",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
+    "sweetalert2": "^10.16.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },

@@ -1,33 +1,41 @@
+@font-face {
+  font-family: bastian;
+  src: url(../../assets/fontes/Bastian-Sidney/Bastian-Sidney.ttf);
+}
 
+h1{
+  text-align: center;
+  color: #1c372c;
+  margin-bottom: 20px;
+  font-size: 100pt;
+}
+
+p{
+  color: white;
+}
+.row{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin: 0px;
+}
 #container-produto{
-    display: flex;
-    justify-content: center;
+
+    background-color: #1c372ce5;
+    border-radius: 10px;
+    width: 700px;
 }
 #produto{
-   background-color: #dda25e98;
-    border-radius: 10px;
-    width: 800px;
-    margin: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
 }
 #produto img{
-    width: 65px;
+    width: 100px;
+    margin: 2vh 0 2vh 0;
 }
-#nome{
-    margin: 4vh;
-}
-#preco{
-    margin: 4vh;
-}
-#produto input{
-    margin: 4vh;
-    width: 80px;
-    height: 30px;
-}
-#naosei{
-    margin: 4vh;
+
+#precoParcial{
+  font-size: 20pt;
+
 }
 #confirma{
     display: flex;
@@ -36,12 +44,34 @@
 #total{
     margin-bottom: 10vh;
     text-align: right;
+    font-size: 30pt;
 }
-.btn{
-    width: 40vh;
+#comprar{
+    width: 30vh;
     margin-bottom: 5vh;
-    font-size: 15pt;
-    padding: 2vh;
+    font-size: 12pt;
     color: white;
-    background-color: #283618;
+    background-color: #1c372c;
 }
+
+#continuar{
+    width: 30vh;
+    margin-bottom: 5vh;
+    font-size: 12pt;
+    color: white;
+    background-color: #884f0e;
+}
+
+#quantidade{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 80pt;
+}
+
+#vazio{
+  text-align: center;
+  color: #884f0e;
+}
+
+

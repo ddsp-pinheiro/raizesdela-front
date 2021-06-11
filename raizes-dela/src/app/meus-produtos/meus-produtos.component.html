@@ -1,0 +1,34 @@
+<div class="container mt-5 mb-5">
+
+  <div class="row mb-5">
+		<div class="col-md-12">
+			<h1 class="text-center">Meus produtos</h1>
+		</div>
+	</div>
+
+  <div class="row">
+    <!--div envolvendo todos os cards-->
+    <div class="col-sm-4 mb-3" *ngFor='let produto of user.produto'>
+
+      <!--cada card com o produto-->
+      <div class="card">
+        <img class="img-fluid" alt="Imagem do produto" src="{{produto.imagem}}">
+
+        <div class="card-body">
+          <h4 class="card-title">{{produto.nome}}</h4>
+          <small class="text-muted">Categoria: {{produto.categoria.nome}}</small>
+          <p class="card-text">{{produto.descricao}}</p>
+          <p>R$ {{produto.valor.toFixed(2).replace('.', ',')}}</p>
+          <p>{{produto.estoque}} unidades disponíveis</p>
+        </div>
+
+        <div class="card-footer">
+          <a [routerLink]="['/produto-delete', produto.id]" id="btn-1" class="btn mr-1">Apagar</a>
+          <a [routerLink]="['/produto-edit', produto.id]" id="btn-2" class="btn ml-1">Editar</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+</div>
